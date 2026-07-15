@@ -53,6 +53,15 @@
   --surface-light: var(--color-white);
   --surface-muted: var(--color-cream);
 
+  /* ---------- Gradientes premium ---------- */
+  --gradient-brand-soft: linear-gradient(135deg, var(--color-green-50) 0%, var(--color-orange-50) 100%);
+  --gradient-dark-surface: linear-gradient(160deg, var(--color-ink) 0%, var(--color-green-700) 140%);
+
+  /* ---------- Glassmorphism ---------- */
+  --surface-glass: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-blur: 14px;
+
   /* ---------- Espaçamento ---------- */
   --space-3xs: 0.25rem;
   --space-2xs: 0.5rem;
