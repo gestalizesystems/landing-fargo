@@ -9,7 +9,6 @@
 /* ---------- Tablet (min-width: 768px) ---------- */
 @media (min-width: 768px) {
   :root {
-    --fs-3xl: 3.25rem;
     --fs-2xl: 2.5rem;
   }
 
