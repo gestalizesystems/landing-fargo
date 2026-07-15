@@ -161,6 +161,26 @@
         <path d="M12 21V5" />
         <path d="M12 6.5c-1.8 0-2.8-1.3-2.8-2.8M12 6.5c1.8 0 2.8-1.3 2.8-2.8M12 10.5c-1.8 0-2.8-1.3-2.8-2.8M12 10.5c1.8 0 2.8-1.3 2.8-2.8M12 14.5c-1.8 0-2.8-1.3-2.8-2.8M12 14.5c1.8 0 2.8-1.3 2.8-2.8" />
       </symbol>
+      <symbol id="icon-trending-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 17l6.5-6.5 4 4L21 6" />
+        <path d="M15 6h6v6" />
+      </symbol>
+      <symbol id="icon-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.5 8L12 3.5 20.5 8 12 12.5 3.5 8z" />
+        <path d="M3.5 8v9L12 21.5 20.5 17V8" />
+        <path d="M12 12.5V21.5" />
+      </symbol>
+      <symbol id="icon-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 11l4-3 4.5 3.5-2 2a1.4 1.4 0 0 1-2 0" />
+        <path d="M22 11l-4-3-4.5 3.5 2 2a1.4 1.4 0 0 0 2 0" />
+        <path d="M10.5 11.5L12 13l1.5-1.5" />
+        <path d="M6 8l3-2.5 3 2 3-2 3 2.5" />
+      </symbol>
+      <symbol id="icon-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21V11l5 3.5V11l5 3.5V11l5 3.5V21H3z" />
+        <path d="M17 14.5V8l3 2v4.5" />
+        <path d="M3 21h18" />
+      </symbol>
     </defs>
   </svg>
 
@@ -177,18 +197,16 @@
           <svg width="22" height="22"><use href="#icon-close"></use></svg>
         </button>
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#sobre" data-nav-link>Sobre</a></li>
-          <li class="nav__item"><a class="nav__link" href="#diferenciais" data-nav-link>Diferenciais</a></li>
           <li class="nav__item"><a class="nav__link" href="#produtos" data-nav-link>Produtos</a></li>
-          <li class="nav__item"><a class="nav__link" href="#beneficios" data-nav-link>Benefícios</a></li>
-          <li class="nav__item"><a class="nav__link" href="#ingredientes" data-nav-link>Ingredientes</a></li>
-          <li class="nav__item"><a class="nav__link" href="#processo" data-nav-link>Processo</a></li>
+          <li class="nav__item"><a class="nav__link" href="#diferenciais" data-nav-link>Diferenciais</a></li>
+          <li class="nav__item"><a class="nav__link" href="#estrutura" data-nav-link>Estrutura</a></li>
           <li class="nav__item"><a class="nav__link" href="#depoimentos" data-nav-link>Depoimentos</a></li>
+          <li class="nav__item"><a class="nav__link" href="#parceria" data-nav-link>Parceria</a></li>
           <li class="nav__item"><a class="nav__link" href="#faq" data-nav-link>FAQ</a></li>
         </ul>
       </nav>
 
-      <a class="btn btn--dark btn--sm header__cta" href="#onde-comprar">Onde Comprar</a>
+      <a class="btn btn--dark btn--sm header__cta" href="#produtos">Comprar Fargo</a>
 
       <button class="nav__toggle" type="button" data-nav-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
         <span class="nav__toggle-bars"><span></span><span></span><span></span></span>
@@ -221,27 +239,28 @@
           </p>
 
           <div class="hero__actions reveal" data-reveal="up" style="--reveal-delay:.3s">
-            <a class="btn btn--primary" href="#produtos">Comprar Agora</a>
+            <a class="btn btn--primary btn--lg" href="#produtos">Comprar Fargo</a>
             <a class="btn btn--outline" href="#produtos">Conheça a Linha</a>
           </div>
 
-          <dl class="hero__stats reveal" data-reveal="up" style="--reveal-delay:.4s">
-            <div class="stat">
-              <dt class="visually-hidden">Linhas de produtos</dt>
-              <dd class="stat__number" data-count="9" data-suffix="+">0</dd>
-              <span class="stat__label">Linhas de produtos</span>
-            </div>
-            <div class="stat">
-              <dt class="visually-hidden">Livre de aromatizantes artificiais</dt>
-              <dd class="stat__number" data-count="100" data-suffix="%">0</dd>
-              <span class="stat__label">Livre de aromatizantes</span>
-            </div>
-            <div class="stat">
-              <dt class="visually-hidden">Etapas de controle de qualidade</dt>
-              <dd class="stat__number" data-count="5" data-suffix="">0</dd>
-              <span class="stat__label">Etapas de controle</span>
-            </div>
-          </dl>
+          <ul class="hero__trust-badges reveal" data-reveal="up" style="--reveal-delay:.4s">
+            <li class="trust-badge">
+              <span class="trust-badge__icon"><svg><use href="#icon-drumstick"></use></svg></span>
+              <span class="trust-badge__label">Proteína de alta qualidade</span>
+            </li>
+            <li class="trust-badge">
+              <span class="trust-badge__icon"><svg><use href="#icon-leaf"></use></svg></span>
+              <span class="trust-badge__label">Ingredientes cuidadosamente selecionados</span>
+            </li>
+            <li class="trust-badge">
+              <span class="trust-badge__icon"><svg><use href="#icon-shield-check"></use></svg></span>
+              <span class="trust-badge__label">Nutrição completa e balanceada</span>
+            </li>
+            <li class="trust-badge">
+              <span class="trust-badge__icon"><svg><use href="#icon-flask"></use></svg></span>
+              <span class="trust-badge__label">Desenvolvido por especialistas em nutrição animal</span>
+            </li>
+          </ul>
         </div>
 
         <div class="hero__media reveal" data-reveal="scale" style="--reveal-delay:.2s">
@@ -273,6 +292,543 @@
         <span aria-hidden="true">FARGO · GARANTIA · QUALIDADE · CRITÉRIO TÉCNICO · CONFIANÇA · FARGO · GARANTIA · QUALIDADE · CRITÉRIO TÉCNICO · CONFIANÇA ·</span>
       </div>
     </div>
+
+    <!-- ================= POR QUE ESCOLHER A FARGO ================= -->
+    <section class="section" id="por-que-fargo">
+      <div class="container">
+        <div class="section__header section__header--center reveal" data-reveal="up">
+          <span class="eyebrow">Por que a Fargo</span>
+          <h2 class="section__title">Uma marca que entrega resultado, dos dois lados do balcão</h2>
+          <p class="section__lead">Para quem cuida de um pet e para quem constrói um negócio em cima da nossa marca.</p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card reveal" data-reveal="up">
+            <span class="why-card__icon"><svg><use href="#icon-award"></use></svg></span>
+            <h3 class="why-card__title">Qualidade Premium</h3>
+            <p class="why-card__text">Fórmulas desenvolvidas com critério técnico e ingredientes selecionados, para pets mais saudáveis e tutores mais satisfeitos.</p>
+          </article>
+          <article class="why-card reveal" data-reveal="up" style="--reveal-delay:.08s">
+            <span class="why-card__icon"><svg><use href="#icon-trending-up"></use></svg></span>
+            <h3 class="why-card__title">Marca em Crescimento</h3>
+            <p class="why-card__text">Presença cada vez maior em pet shops e distribuidores de todo o Brasil — girar Fargo é acompanhar uma marca em expansão.</p>
+          </article>
+          <article class="why-card reveal" data-reveal="up" style="--reveal-delay:.16s">
+            <span class="why-card__icon"><svg><use href="#icon-box"></use></svg></span>
+            <h3 class="why-card__title">Portfólio Completo</h3>
+            <p class="why-card__text">Rações, sachês, enlatados e granulado higiênico para cães e gatos em cada fase da vida — uma linha só, para todo o sortimento.</p>
+          </article>
+          <article class="why-card reveal" data-reveal="up" style="--reveal-delay:.24s">
+            <span class="why-card__icon"><svg><use href="#icon-handshake"></use></svg></span>
+            <h3 class="why-card__title">Parcerias de Longo Prazo</h3>
+            <p class="why-card__text">Suporte comercial e logística confiável para quem vende — construímos relações que crescem junto com o seu negócio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LINHA DE PRODUTOS ================= -->
+    <section class="section" id="produtos">
+      <div class="container">
+        <div class="section__header section__header--center reveal" data-reveal="up">
+          <span class="eyebrow">Linha de Produtos</span>
+          <h2 class="section__title">Uma linha completa para cada fase e porte</h2>
+          <p class="section__lead">Fórmulas específicas para cães e gatos, do filhote ao adulto, em qualquer porte.</p>
+        </div>
+
+        <article class="product-spotlight reveal" data-reveal="up">
+          <div class="product-spotlight__media">
+            <img src="assets/images/kibble-dog-adulto.webp" alt="Embalagem Fargo Premium para cães adultos, sabor carne, frango e batata-doce" loading="lazy" decoding="async" width="950" height="1420" />
+          </div>
+          <div class="product-spotlight__body">
+            <span class="product-spotlight__tag">Mais vendido</span>
+            <h3 class="product-spotlight__title">Fargo Premium Adultos</h3>
+            <p class="product-spotlight__desc">Alimento completo para cães adultos de todos os portes, rico em ômega 3 e 6, condroitina e glicosamina — para uma vida mais ativa e articulações saudáveis.</p>
+            <ul class="product-spotlight__benefits">
+              <li><svg width="16" height="16"><use href="#icon-check"></use></svg>Pelagem e pele mais saudáveis</li>
+              <li><svg width="16" height="16"><use href="#icon-check"></use></svg>Articulações fortalecidas</li>
+              <li><svg width="16" height="16"><use href="#icon-check"></use></svg>Para cães adultos de todos os portes</li>
+            </ul>
+            <div class="product-spotlight__actions">
+              <a class="btn btn--primary" href="#onde-comprar">Comprar Fargo</a>
+              <button class="btn btn--outline" type="button" data-product-open="adultos-caes">Saiba Mais</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="tabs">
+          <div class="tabs__list" role="tablist" aria-label="Filtrar produtos por categoria">
+            <button class="tabs__btn is-active" type="button" role="tab" aria-selected="true" aria-controls="painel-caes" id="tab-caes" data-tab="caes">Cães</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-gatos" id="tab-gatos" data-tab="gatos">Gatos</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-saches" id="tab-saches" data-tab="saches">Sachês</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-enlatados" id="tab-enlatados" data-tab="enlatados">Enlatados</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-granulado" id="tab-granulado" data-tab="granulado">Granulado Higiênico</button>
+          </div>
+        </div>
+
+        <div class="products__panel is-active" id="painel-caes" role="tabpanel" aria-labelledby="tab-caes" data-panel="caes">
+          <div class="products__grid">
+
+            <article class="product-card reveal" data-reveal="up">
+              <div class="product-card__media">
+                <span class="product-card__tag">Adultos</span>
+                <img src="assets/images/kibble-dog-adulto.webp" alt="Embalagem Fargo Premium para cães adultos, sabor carne, frango e batata-doce" loading="lazy" decoding="async" width="950" height="1420" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Fargo Premium Adultos</h3>
+                <p class="product-card__flavor">Carne, frango e batata-doce</p>
+                <p class="product-card__desc">Alimento completo para cães adultos de todos os portes, rico em ômega 3 e 6, condroitina e glicosamina.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="adultos-caes">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.08s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Filhotes</span>
+                <img src="assets/images/kibble-dog-filhote.webp" alt="Embalagem Fargo Premium para cães filhotes, sabor carne e cereais" loading="lazy" decoding="async" width="740" height="1142" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Fargo Premium Filhotes</h3>
+                <p class="product-card__flavor">Carne e cereais</p>
+                <p class="product-card__desc">Nutrição completa para o crescimento saudável do filhote, com proteínas, ferro e cálcio.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="filhotes-caes">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.16s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Raças Pequenas</span>
+                <img src="assets/images/kibble-dog-pequeno.webp" alt="Embalagem Fargo Premium Especial para cães de pequeno porte" loading="lazy" decoding="async" width="964" height="1474" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Fargo Premium Especial Pequeno Porte</h3>
+                <p class="product-card__flavor">Carne, frango e batata-doce</p>
+                <p class="product-card__desc">Fórmula especial para cães de pequeno porte, com grãos que auxiliam a saúde bucal.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="pequeno-porte-caes">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Blend Dog</span>
+                <img src="assets/images/kibble-dog-blend.webp" alt="Embalagem Blend Dog Premium para cães adultos, sabor carne e cereais" loading="lazy" decoding="async" width="1002" height="1526" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Blend Dog Premium</h3>
+                <p class="product-card__flavor">Carne e cereais</p>
+                <p class="product-card__desc">Fórmula 100% natural para dias cheios de aventuras, com extrato de yucca e ômega 3 e 6.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="blend-dog">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.32s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Raças Grandes</span>
+                <img src="assets/images/kibble-dog-blend-portes.webp" alt="Embalagem Blend Dog para cães adultos de todos os portes" loading="lazy" decoding="async" width="992" height="1505" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Blend Dog Todos os Portes</h3>
+                <p class="product-card__flavor">Carne e cereais · 18% proteína</p>
+                <p class="product-card__desc">Para cães adultos de todos os portes, com ação anti-tártaro e mais brilho na pelagem.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="blend-dog-todos-portes">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="products__panel" id="painel-gatos" role="tabpanel" aria-labelledby="tab-gatos" data-panel="gatos" hidden>
+          <div class="products__grid">
+
+            <article class="product-card reveal" data-reveal="up">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Adultos</span>
+                <img src="assets/images/kibble-cat-salmao.webp" alt="Embalagem Fargo Premium para gatos adultos, sabor salmão" loading="lazy" decoding="async" width="999" height="1484" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Fargo Premium Adultos</h3>
+                <p class="product-card__flavor">Salmão</p>
+                <p class="product-card__desc">Nutrição completa com salmão selecionado, rico em ômega e taurina para pele e pelos saudáveis.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="gatos-salmao">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.08s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Adultos</span>
+                <img src="assets/images/kibble-cat-adulto.webp" alt="Embalagem Fargo Premium para gatos adultos, sabor carne, frango e cereais" loading="lazy" decoding="async" width="799" height="1172" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Fargo Premium Adultos</h3>
+                <p class="product-card__flavor">Carne, frango e cereais</p>
+                <p class="product-card__desc">Alimento completo e equilibrado, com proteínas nobres para músculos e ossos fortes.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="gatos-adultos">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.16s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Adultos</span>
+                <img src="assets/images/kibble-cat-peixe.webp" alt="Embalagem Fargo Premium para gatos adultos, sabor peixe e cereais" loading="lazy" decoding="async" width="773" height="1182" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Fargo Premium Adultos</h3>
+                <p class="product-card__flavor">Peixe e cereais</p>
+                <p class="product-card__desc">Fórmula à base de peixe com grãos selecionados, ideal para saúde bucal e brilho da pelagem.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="gatos-peixe">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Castrados</span>
+                <img src="assets/images/kibble-cat-castrado.webp" alt="Embalagem Fargo Premium para gatos castrados, sabor carne, frango e peixe" loading="lazy" decoding="async" width="883" height="1437" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Fargo Premium Castrados</h3>
+                <p class="product-card__flavor">Carne, frango e peixe</p>
+                <p class="product-card__desc">Desenvolvida para as necessidades específicas de gatos castrados, com imunidade fortalecida.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="gatos-castrados">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="products__panel" id="painel-saches" role="tabpanel" aria-labelledby="tab-saches" data-panel="saches" hidden>
+          <div class="products__grid">
+
+            <article class="product-card reveal" data-reveal="up">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/pouch-dog-cordeiro.webp" alt="Sachê Fargo Premium Especial Cordeiro ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sachê Cordeiro ao Molho</h3>
+                <p class="product-card__flavor">100g · Cozido a vapor</p>
+                <p class="product-card__desc">Elaborado com carnes selecionadas, sem aromatizantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-dog-cordeiro">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/pouch-dog-carne.webp" alt="Sachê Fargo Premium Especial Carne ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sachê Carne ao Molho</h3>
+                <p class="product-card__flavor">100g · Cozido a vapor</p>
+                <p class="product-card__desc">Ingredientes naturais e alta palatabilidade para o dia a dia do seu cão.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-dog-carne">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/pouch-dog-frango.webp" alt="Sachê Fargo Premium Especial Frango ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sachê Frango ao Molho</h3>
+                <p class="product-card__flavor">100g · Cozido a vapor</p>
+                <p class="product-card__desc">Saboroso e nutritivo, sem transgênicos ou conservantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-dog-frango">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.18s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Castrados</span>
+                <img src="assets/images/pouch-cat-salmao.webp" alt="Sachê Fargo Premium Especial Salmão ao Molho para gatos castrados" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sachê Salmão ao Molho</h3>
+                <p class="product-card__flavor">85g · Cozido a vapor</p>
+                <p class="product-card__desc">Auxilia na hidratação, com ingredientes naturais e sabor irresistível.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-cat-salmao">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Adultos</span>
+                <img src="assets/images/pouch-cat-frango.webp" alt="Sachê Fargo Premium Especial Frango ao Molho para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sachê Frango ao Molho</h3>
+                <p class="product-card__flavor">85g · Cozido a vapor</p>
+                <p class="product-card__desc">Elaborado por nutricionistas e veterinários, com ingredientes naturais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-cat-frango">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.3s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Castrados</span>
+                <img src="assets/images/pouch-cat-carne.webp" alt="Sachê Fargo Premium Especial Carne ao Molho para gatos castrados" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sachê Carne ao Molho</h3>
+                <p class="product-card__flavor">85g · Cozido a vapor</p>
+                <p class="product-card__desc">Formulado para as necessidades específicas de gatos castrados.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-cat-carne">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="products__panel" id="painel-enlatados" role="tabpanel" aria-labelledby="tab-enlatados" data-panel="enlatados" hidden>
+          <div class="products__grid">
+
+            <article class="product-card reveal" data-reveal="up">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/can-dog-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-carne">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Filhotes</span>
+                <img src="assets/images/can-dog-filhote-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para cães filhotes" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Nutrição completa para o crescimento saudável do filhote.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-filhote-carne">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/can-dog-frango.webp" alt="Enlatado Fargo Premium Especial sabor frango para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Frango</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-frango">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.18s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/can-dog-figado.webp" alt="Enlatado Fargo Premium Especial sabor fígado para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Fígado</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-figado">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Adultos</span>
+                <img src="assets/images/can-cat-frango.webp" alt="Enlatado Fargo Premium Especial sabor frango para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Frango</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, desenvolvida para gatos adultos de todas as raças.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-cat-frango">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.3s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Adultos</span>
+                <img src="assets/images/can-cat-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, desenvolvida para gatos adultos de todas as raças.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-cat-carne">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.36s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Adultos</span>
+                <img src="assets/images/can-cat-figado.webp" alt="Enlatado Fargo Premium Especial sabor fígado para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Fígado</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, desenvolvida para gatos adultos de todas as raças.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-cat-figado">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.42s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Gatos Adultos</span>
+                <img src="assets/images/can-cat-peixe.webp" alt="Enlatado Fargo Premium Especial sabor peixe para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Peixe</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, desenvolvida para gatos adultos de todas as raças.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-cat-peixe">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="products__panel" id="painel-granulado" role="tabpanel" aria-labelledby="tab-granulado" data-panel="granulado" hidden>
+          <div class="products__grid">
+
+            <article class="product-card reveal" data-reveal="up">
+              <div class="product-card__media">
+                <span class="product-card__tag">Granulado</span>
+                <img src="assets/images/litter-tradicional.webp" alt="Granulado higiênico Fargo Tradicional 4kg" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Granulado Higiênico Tradicional</h3>
+                <p class="product-card__flavor">4kg · Clássico</p>
+                <p class="product-card__desc">100% natural, torrões firmes, antiodor e máxima absorção.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="litter-tradicional">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Granulado</span>
+                <img src="assets/images/litter-fino.webp" alt="Granulado higiênico Fargo Fino, grãos finos, 4kg" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Granulado Higiênico Fino</h3>
+                <p class="product-card__flavor">4kg · Grãos finos</p>
+                <p class="product-card__desc">100% natural, torrões firmes, antiodor e máxima absorção.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="litter-fino">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Granulado</span>
+                <img src="assets/images/litter-perfumado.webp" alt="Granulado higiênico Fargo Perfumado, fragrância floral, 4kg" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Granulado Higiênico Perfumado</h3>
+                <p class="product-card__flavor">4kg · Fragrância floral</p>
+                <p class="product-card__desc">100% natural, torrões firmes, antiodor e máxima absorção.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="litter-perfumado">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.18s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Granulado</span>
+                <img src="assets/images/litter-fino-perfumado.webp" alt="Granulado higiênico Fargo Fino Perfumado, grãos finos com fragrância floral, 4kg" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Granulado Higiênico Fino Perfumado</h3>
+                <p class="product-card__flavor">4kg · Grãos finos + fragrância floral</p>
+                <p class="product-card__desc">100% natural, torrões firmes, antiodor e máxima absorção.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="litter-fino-perfumado">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ================= SOBRE A MARCA ================= -->
     <section class="section" id="sobre">
@@ -375,410 +931,9 @@
       </div>
     </section>
 
-    <!-- ================= LINHA DE PRODUTOS ================= -->
-    <section class="section" id="produtos">
-      <div class="container">
-        <div class="section__header section__header--center reveal" data-reveal="up">
-          <span class="eyebrow">Linha de Produtos</span>
-          <h2 class="section__title">Uma linha completa para cada fase e porte</h2>
-          <p class="section__lead">Fórmulas específicas para cães e gatos, do filhote ao adulto, em qualquer porte.</p>
-        </div>
-
-        <div class="tabs">
-          <div class="tabs__list" role="tablist" aria-label="Filtrar produtos por categoria">
-            <button class="tabs__btn is-active" type="button" role="tab" aria-selected="true" aria-controls="painel-caes" id="tab-caes" data-tab="caes">Cães</button>
-            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-gatos" id="tab-gatos" data-tab="gatos">Gatos</button>
-            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-saches" id="tab-saches" data-tab="saches">Sachês</button>
-            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-enlatados" id="tab-enlatados" data-tab="enlatados">Enlatados</button>
-            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-granulado" id="tab-granulado" data-tab="granulado">Granulado Higiênico</button>
-          </div>
-        </div>
-
-        <div class="products__panel is-active" id="painel-caes" role="tabpanel" aria-labelledby="tab-caes" data-panel="caes">
-          <div class="products__grid">
-
-            <article class="product-card reveal" data-reveal="up">
-              <div class="product-card__media">
-                <span class="product-card__tag">Adultos</span>
-                <img src="assets/images/kibble-dog-adulto.webp" alt="Embalagem Fargo Premium para cães adultos, sabor carne, frango e batata-doce" loading="lazy" decoding="async" width="950" height="1420" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Fargo Premium Adultos</h3>
-                <p class="product-card__flavor">Carne, frango e batata-doce</p>
-                <p class="product-card__desc">Alimento completo para cães adultos de todos os portes, rico em ômega 3 e 6, condroitina e glicosamina.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="adultos-caes">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.08s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Filhotes</span>
-                <img src="assets/images/kibble-dog-filhote.webp" alt="Embalagem Fargo Premium para cães filhotes, sabor carne e cereais" loading="lazy" decoding="async" width="740" height="1142" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Fargo Premium Filhotes</h3>
-                <p class="product-card__flavor">Carne e cereais</p>
-                <p class="product-card__desc">Nutrição completa para o crescimento saudável do filhote, com proteínas, ferro e cálcio.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="filhotes-caes">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.16s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Raças Pequenas</span>
-                <img src="assets/images/kibble-dog-pequeno.webp" alt="Embalagem Fargo Premium Especial para cães de pequeno porte" loading="lazy" decoding="async" width="964" height="1474" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Fargo Premium Especial Pequeno Porte</h3>
-                <p class="product-card__flavor">Carne, frango e batata-doce</p>
-                <p class="product-card__desc">Fórmula especial para cães de pequeno porte, com grãos que auxiliam a saúde bucal.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="pequeno-porte-caes">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Blend Dog</span>
-                <img src="assets/images/kibble-dog-blend.webp" alt="Embalagem Blend Dog Premium para cães adultos, sabor carne e cereais" loading="lazy" decoding="async" width="1002" height="1526" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Blend Dog Premium</h3>
-                <p class="product-card__flavor">Carne e cereais</p>
-                <p class="product-card__desc">Fórmula 100% natural para dias cheios de aventuras, com extrato de yucca e ômega 3 e 6.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="blend-dog">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.32s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Raças Grandes</span>
-                <img src="assets/images/kibble-dog-blend-portes.webp" alt="Embalagem Blend Dog para cães adultos de todos os portes" loading="lazy" decoding="async" width="992" height="1505" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Blend Dog Todos os Portes</h3>
-                <p class="product-card__flavor">Carne e cereais · 18% proteína</p>
-                <p class="product-card__desc">Para cães adultos de todos os portes, com ação anti-tártaro e mais brilho na pelagem.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="blend-dog-todos-portes">Saiba Mais</button>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <div class="products__panel" id="painel-gatos" role="tabpanel" aria-labelledby="tab-gatos" data-panel="gatos" hidden>
-          <div class="products__grid">
-
-            <article class="product-card reveal" data-reveal="up">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Adultos</span>
-                <img src="assets/images/kibble-cat-salmao.webp" alt="Embalagem Fargo Premium para gatos adultos, sabor salmão" loading="lazy" decoding="async" width="999" height="1484" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Fargo Premium Adultos</h3>
-                <p class="product-card__flavor">Salmão</p>
-                <p class="product-card__desc">Nutrição completa com salmão selecionado, rico em ômega e taurina para pele e pelos saudáveis.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="gatos-salmao">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.08s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Adultos</span>
-                <img src="assets/images/kibble-cat-adulto.webp" alt="Embalagem Fargo Premium para gatos adultos, sabor carne, frango e cereais" loading="lazy" decoding="async" width="799" height="1172" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Fargo Premium Adultos</h3>
-                <p class="product-card__flavor">Carne, frango e cereais</p>
-                <p class="product-card__desc">Alimento completo e equilibrado, com proteínas nobres para músculos e ossos fortes.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="gatos-adultos">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.16s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Adultos</span>
-                <img src="assets/images/kibble-cat-peixe.webp" alt="Embalagem Fargo Premium para gatos adultos, sabor peixe e cereais" loading="lazy" decoding="async" width="773" height="1182" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Fargo Premium Adultos</h3>
-                <p class="product-card__flavor">Peixe e cereais</p>
-                <p class="product-card__desc">Fórmula à base de peixe com grãos selecionados, ideal para saúde bucal e brilho da pelagem.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="gatos-peixe">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Castrados</span>
-                <img src="assets/images/kibble-cat-castrado.webp" alt="Embalagem Fargo Premium para gatos castrados, sabor carne, frango e peixe" loading="lazy" decoding="async" width="883" height="1437" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Fargo Premium Castrados</h3>
-                <p class="product-card__flavor">Carne, frango e peixe</p>
-                <p class="product-card__desc">Desenvolvida para as necessidades específicas de gatos castrados, com imunidade fortalecida.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="gatos-castrados">Saiba Mais</button>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <div class="products__panel" id="painel-saches" role="tabpanel" aria-labelledby="tab-saches" data-panel="saches" hidden>
-          <div class="products__grid">
-
-            <article class="product-card reveal" data-reveal="up">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/pouch-dog-cordeiro.webp" alt="Sachê Fargo Premium Especial Cordeiro ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Sachê Cordeiro ao Molho</h3>
-                <p class="product-card__flavor">100g · Cozido a vapor</p>
-                <p class="product-card__desc">Elaborado com carnes selecionadas, sem aromatizantes artificiais.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="sache-dog-cordeiro">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/pouch-dog-carne.webp" alt="Sachê Fargo Premium Especial Carne ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Sachê Carne ao Molho</h3>
-                <p class="product-card__flavor">100g · Cozido a vapor</p>
-                <p class="product-card__desc">Ingredientes naturais e alta palatabilidade para o dia a dia do seu cão.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="sache-dog-carne">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/pouch-dog-frango.webp" alt="Sachê Fargo Premium Especial Frango ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Sachê Frango ao Molho</h3>
-                <p class="product-card__flavor">100g · Cozido a vapor</p>
-                <p class="product-card__desc">Saboroso e nutritivo, sem transgênicos ou conservantes artificiais.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="sache-dog-frango">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.18s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Castrados</span>
-                <img src="assets/images/pouch-cat-salmao.webp" alt="Sachê Fargo Premium Especial Salmão ao Molho para gatos castrados" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Sachê Salmão ao Molho</h3>
-                <p class="product-card__flavor">85g · Cozido a vapor</p>
-                <p class="product-card__desc">Auxilia na hidratação, com ingredientes naturais e sabor irresistível.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="sache-cat-salmao">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Adultos</span>
-                <img src="assets/images/pouch-cat-frango.webp" alt="Sachê Fargo Premium Especial Frango ao Molho para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Sachê Frango ao Molho</h3>
-                <p class="product-card__flavor">85g · Cozido a vapor</p>
-                <p class="product-card__desc">Elaborado por nutricionistas e veterinários, com ingredientes naturais.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="sache-cat-frango">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.3s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Castrados</span>
-                <img src="assets/images/pouch-cat-carne.webp" alt="Sachê Fargo Premium Especial Carne ao Molho para gatos castrados" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Sachê Carne ao Molho</h3>
-                <p class="product-card__flavor">85g · Cozido a vapor</p>
-                <p class="product-card__desc">Formulado para as necessidades específicas de gatos castrados.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="sache-cat-carne">Saiba Mais</button>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <div class="products__panel" id="painel-enlatados" role="tabpanel" aria-labelledby="tab-enlatados" data-panel="enlatados" hidden>
-          <div class="products__grid">
-
-            <article class="product-card reveal" data-reveal="up">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/can-dog-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="can-dog-carne">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Filhotes</span>
-                <img src="assets/images/can-dog-filhote-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para cães filhotes" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Nutrição completa para o crescimento saudável do filhote.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="can-dog-filhote-carne">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/can-dog-frango.webp" alt="Enlatado Fargo Premium Especial sabor frango para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Frango</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="can-dog-frango">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.18s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/can-dog-figado.webp" alt="Enlatado Fargo Premium Especial sabor fígado para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Fígado</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="can-dog-figado">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Adultos</span>
-                <img src="assets/images/can-cat-frango.webp" alt="Enlatado Fargo Premium Especial sabor frango para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Frango</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, desenvolvida para gatos adultos de todas as raças.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="can-cat-frango">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.3s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Adultos</span>
-                <img src="assets/images/can-cat-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, desenvolvida para gatos adultos de todas as raças.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="can-cat-carne">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.36s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Adultos</span>
-                <img src="assets/images/can-cat-figado.webp" alt="Enlatado Fargo Premium Especial sabor fígado para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Fígado</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, desenvolvida para gatos adultos de todas as raças.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="can-cat-figado">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.42s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Gatos Adultos</span>
-                <img src="assets/images/can-cat-peixe.webp" alt="Enlatado Fargo Premium Especial sabor peixe para gatos adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Peixe</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, desenvolvida para gatos adultos de todas as raças.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="can-cat-peixe">Saiba Mais</button>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <div class="products__panel" id="painel-granulado" role="tabpanel" aria-labelledby="tab-granulado" data-panel="granulado" hidden>
-          <div class="products__grid">
-
-            <article class="product-card reveal" data-reveal="up">
-              <div class="product-card__media">
-                <span class="product-card__tag">Granulado</span>
-                <img src="assets/images/litter-tradicional.webp" alt="Granulado higiênico Fargo Tradicional 4kg" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Granulado Higiênico Tradicional</h3>
-                <p class="product-card__flavor">4kg · Clássico</p>
-                <p class="product-card__desc">100% natural, torrões firmes, antiodor e máxima absorção.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="litter-tradicional">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Granulado</span>
-                <img src="assets/images/litter-fino.webp" alt="Granulado higiênico Fargo Fino, grãos finos, 4kg" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Granulado Higiênico Fino</h3>
-                <p class="product-card__flavor">4kg · Grãos finos</p>
-                <p class="product-card__desc">100% natural, torrões firmes, antiodor e máxima absorção.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="litter-fino">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Granulado</span>
-                <img src="assets/images/litter-perfumado.webp" alt="Granulado higiênico Fargo Perfumado, fragrância floral, 4kg" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Granulado Higiênico Perfumado</h3>
-                <p class="product-card__flavor">4kg · Fragrância floral</p>
-                <p class="product-card__desc">100% natural, torrões firmes, antiodor e máxima absorção.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="litter-perfumado">Saiba Mais</button>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.18s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Granulado</span>
-                <img src="assets/images/litter-fino-perfumado.webp" alt="Granulado higiênico Fargo Fino Perfumado, grãos finos com fragrância floral, 4kg" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Granulado Higiênico Fino Perfumado</h3>
-                <p class="product-card__flavor">4kg · Grãos finos + fragrância floral</p>
-                <p class="product-card__desc">100% natural, torrões firmes, antiodor e máxima absorção.</p>
-                <button class="btn btn--outline btn--sm btn--block" type="button" data-product-open="litter-fino-perfumado">Saiba Mais</button>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ================= BENEFÍCIOS ================= -->
-    <section class="section section--muted" id="beneficios">
+    <section class="section" id="beneficios">
       <div class="container">
         <div class="section__header section__header--center reveal" data-reveal="up">
           <span class="eyebrow">Benefícios</span>
@@ -856,12 +1011,31 @@
       </div>
     </section>
 
-    <!-- ================= PROCESSO DE PRODUÇÃO ================= -->
-    <section class="section" id="processo">
+    <!-- ================= ESTRUTURA ================= -->
+    <section class="section estrutura" id="estrutura">
       <div class="container">
         <div class="section__header section__header--center reveal" data-reveal="up">
-          <span class="eyebrow">Processo de Produção</span>
-          <h2 class="section__title">Da matéria-prima ao ponto de venda</h2>
+          <span class="eyebrow">Nossa Estrutura</span>
+          <h2 class="section__title">Uma operação pensada para dar segurança a cada etapa</h2>
+          <p class="section__lead">Da matéria-prima ao ponto de venda, cada elo da cadeia existe para proteger a qualidade que chega até o pet.</p>
+        </div>
+
+        <div class="stat-bento reveal" data-reveal="up">
+          <div class="stat-bento__cell">
+            <span class="stat-bento__icon"><svg><use href="#icon-box"></use></svg></span>
+            <span class="stat__number" data-count="27" data-suffix="+">0</span>
+            <span class="stat__label">Produtos Fargo</span>
+          </div>
+          <div class="stat-bento__cell">
+            <span class="stat-bento__icon"><svg><use href="#icon-leaf"></use></svg></span>
+            <span class="stat__number" data-count="100" data-suffix="%">0</span>
+            <span class="stat__label">Livre de aromatizantes</span>
+          </div>
+          <div class="stat-bento__cell">
+            <span class="stat-bento__icon"><svg><use href="#icon-shield-check"></use></svg></span>
+            <span class="stat__number" data-count="5" data-suffix="">0</span>
+            <span class="stat__label">Etapas de controle</span>
+          </div>
         </div>
 
         <ol class="process__timeline">
@@ -907,6 +1081,7 @@
             <div class="testimonial-track__inner" data-slider-track>
 
               <div class="testimonial-card" data-slide>
+                <span class="testimonial-card__tag testimonial-card__tag--tutor">Tutor(a)</span>
                 <div class="testimonial__stars" aria-label="5 de 5 estrelas">
                   <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
                 </div>
@@ -921,6 +1096,7 @@
               </div>
 
               <div class="testimonial-card" data-slide>
+                <span class="testimonial-card__tag testimonial-card__tag--parceiro">Parceiro(a) Comercial</span>
                 <div class="testimonial__stars" aria-label="5 de 5 estrelas">
                   <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
                 </div>
@@ -935,6 +1111,7 @@
               </div>
 
               <div class="testimonial-card" data-slide>
+                <span class="testimonial-card__tag testimonial-card__tag--tutor">Tutor(a)</span>
                 <div class="testimonial__stars" aria-label="5 de 5 estrelas">
                   <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
                 </div>
@@ -949,6 +1126,7 @@
               </div>
 
               <div class="testimonial-card" data-slide>
+                <span class="testimonial-card__tag testimonial-card__tag--tutor">Tutor(a)</span>
                 <div class="testimonial__stars" aria-label="5 de 5 estrelas">
                   <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
                 </div>
@@ -963,6 +1141,7 @@
               </div>
 
               <div class="testimonial-card" data-slide>
+                <span class="testimonial-card__tag testimonial-card__tag--parceiro">Parceiro(a) Comercial</span>
                 <div class="testimonial__stars" aria-label="5 de 5 estrelas">
                   <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
                 </div>
@@ -972,6 +1151,21 @@
                   <div>
                     <p class="testimonial__name">Bianca L.</p>
                     <p class="testimonial__role">Distribuidora Parceira</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card" data-slide>
+                <span class="testimonial-card__tag testimonial-card__tag--parceiro">Parceiro(a) Comercial</span>
+                <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+                  <svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg><svg><use href="#icon-star"></use></svg>
+                </div>
+                <p class="testimonial__quote">“Recomendamos a linha Fargo para os tutores no consultório — a aceitação é alta e o suporte técnico da equipe da marca é rápido sempre que precisamos.”</p>
+                <div class="testimonial__author">
+                  <span class="testimonial__avatar" aria-hidden="true" style="display:grid;place-items:center;font-weight:700;color:var(--color-fargo-mark);background:var(--color-green-50);">JV</span>
+                  <div>
+                    <p class="testimonial__name">Dra. Juliana V.</p>
+                    <p class="testimonial__role">Clínica Veterinária Parceira</p>
                   </div>
                 </div>
               </div>
@@ -992,30 +1186,54 @@
       </div>
     </section>
 
-    <!-- ================= PARCEIROS ================= -->
-    <section class="section" id="parceiros">
-      <div class="container">
-        <div class="section__header section__header--center reveal" data-reveal="up">
-          <span class="eyebrow">Parceiros</span>
-          <h2 class="section__title">Uma rede que confia na Fargo</h2>
+    <!-- ================= PARCERIA COMERCIAL ================= -->
+    <section class="section" id="parceria">
+      <div class="container partnership__grid">
+        <div class="partnership__text reveal" data-reveal="left">
+          <span class="eyebrow">Parceria Comercial</span>
+          <h2 class="section__title">Crescer junto com quem vende Fargo</h2>
+          <p class="about__lead">
+            Vender Fargo é vender uma marca que investe no seu parceiro tanto quanto no produto.
+          </p>
+          <ul class="partnership__list">
+            <li>
+              <span class="partnership__list-icon"><svg><use href="#icon-check"></use></svg></span>
+              Suporte comercial dedicado, do primeiro pedido em diante
+            </li>
+            <li>
+              <span class="partnership__list-icon"><svg><use href="#icon-check"></use></svg></span>
+              Logística confiável, com entregas previsíveis para manter o giro
+            </li>
+            <li>
+              <span class="partnership__list-icon"><svg><use href="#icon-check"></use></svg></span>
+              Relacionamento de longo prazo, não apenas uma venda pontual
+            </li>
+            <li>
+              <span class="partnership__list-icon"><svg><use href="#icon-check"></use></svg></span>
+              Crescemos junto com o seu negócio, com uma marca em expansão
+            </li>
+          </ul>
+          <a class="btn btn--primary" href="#contato">Torne-se um Parceiro Fargo</a>
         </div>
 
-        <div class="partners__grid">
-          <div class="partner-chip reveal" data-reveal="up">
-            <svg><use href="#icon-heart"></use></svg>
-            Clínicas Veterinárias
-          </div>
-          <div class="partner-chip reveal" data-reveal="up" style="--reveal-delay:.06s">
-            <svg><use href="#icon-paw"></use></svg>
-            Pet Shops Parceiros
-          </div>
-          <div class="partner-chip reveal" data-reveal="up" style="--reveal-delay:.12s">
-            <svg><use href="#icon-truck"></use></svg>
-            Distribuidores Regionais
-          </div>
-          <div class="partner-chip reveal" data-reveal="up" style="--reveal-delay:.18s">
-            <svg><use href="#icon-award"></use></svg>
-            Indústria Brasileira
+        <div class="partnership__partners">
+          <div class="partners__grid">
+            <div class="partner-chip reveal" data-reveal="up">
+              <svg><use href="#icon-heart"></use></svg>
+              Clínicas Veterinárias
+            </div>
+            <div class="partner-chip reveal" data-reveal="up" style="--reveal-delay:.06s">
+              <svg><use href="#icon-paw"></use></svg>
+              Pet Shops Parceiros
+            </div>
+            <div class="partner-chip reveal" data-reveal="up" style="--reveal-delay:.12s">
+              <svg><use href="#icon-truck"></use></svg>
+              Distribuidores Regionais
+            </div>
+            <div class="partner-chip reveal" data-reveal="up" style="--reveal-delay:.18s">
+              <svg><use href="#icon-award"></use></svg>
+              Indústria Brasileira
+            </div>
           </div>
         </div>
       </div>
@@ -1085,7 +1303,7 @@
             </button>
             <div class="faq-item__panel">
               <div class="faq-item__panel-inner">
-                <p class="faq-item__answer">Você encontra a linha completa em pet shops parceiros de todo o país. Use o botão “Encontrar Loja” para falar com o nosso time e localizar o ponto de venda mais próximo.</p>
+                <p class="faq-item__answer">Você encontra a linha completa em pet shops parceiros de todo o país. Use o botão “Comprar Fargo” para conhecer a linha completa e falar com o nosso time.</p>
               </div>
             </div>
           </div>
@@ -1117,8 +1335,8 @@
           Fale com a nossa equipe, conheça a linha completa e descubra o ponto de venda Fargo mais próximo de você.
         </p>
         <div class="cta-final__actions reveal" data-reveal="up">
-          <a class="btn btn--primary" href="#produtos">Comprar Agora</a>
-          <a class="btn btn--outline" href="#contato">Encontrar Loja</a>
+          <a class="btn btn--primary btn--lg" href="#produtos">Comprar Fargo</a>
+          <a class="btn btn--outline" href="#parceria">Torne-se um Parceiro Fargo</a>
         </div>
       </div>
     </section>
@@ -1148,6 +1366,7 @@
             <a href="#produtos">Produtos</a>
             <a href="#beneficios">Benefícios</a>
             <a href="#depoimentos">Depoimentos</a>
+            <a href="#parceria">Parceria</a>
             <a href="#faq">FAQ</a>
           </nav>
         </div>

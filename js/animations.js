@@ -84,8 +84,40 @@
     counters.forEach((el) => observer.observe(el));
   }
 
+  /* ---------- Parallax leve no hero ---------- */
+  function initHeroParallax() {
+    const heroImage = document.querySelector(".hero__image");
+    if (!heroImage || prefersReducedMotion) return;
+
+    const desktopQuery = window.matchMedia("(min-width: 1024px)");
+    let ticking = false;
+    let enabled = desktopQuery.matches;
+
+    function update() {
+      ticking = false;
+      if (!enabled) return;
+      const offset = Math.min(window.scrollY, 600) * -0.08;
+      heroImage.style.transform = `translateY(${offset}px)`;
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+
+    function onQueryChange(e) {
+      enabled = e.matches;
+      if (!enabled) heroImage.style.transform = "";
+    }
+
+    desktopQuery.addEventListener("change", onQueryChange);
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initScrollReveal();
     initCounters();
+    initHeroParallax();
   });
 })();

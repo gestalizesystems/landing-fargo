@@ -21,6 +21,10 @@
     max-width: 16ch;
   }
 
+  .trust-badge {
+    width: auto;
+  }
+
   .about__grid {
     grid-template-columns: 1fr;
   }
@@ -33,6 +37,14 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-bento {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .benefits__grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -43,6 +55,15 @@
 
   .products__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-spotlight {
+    grid-template-columns: 280px 1fr;
+    align-items: center;
+  }
+
+  .product-spotlight__media {
+    max-width: none;
   }
 
   .partners__grid {
@@ -123,8 +144,16 @@
     align-items: start;
   }
 
+  .partnership__grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .benefits__grid {
@@ -189,8 +218,7 @@
     grid-template-columns: 1.4fr repeat(3, 1fr);
   }
 
-  #beneficios .section__title,
-  #processo .section__title {
+  #beneficios .section__title {
     max-width: none;
     white-space: nowrap;
   }
