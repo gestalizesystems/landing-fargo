@@ -77,7 +77,7 @@
       name: "Sachê Cordeiro ao Molho",
       flavor: "Cães Adultos · 100g",
       image: "assets/images/pouch-dog-cordeiro.webp",
-      desc: "Elaborado com carnes selecionadas, cozido a vapor e sem corantes ou aromatizantes artificiais.",
+      desc: "Elaborado com carnes selecionadas, cozido a vapor e sem aromatizantes artificiais.",
       benefits: ["Ingredientes naturais", "Ótima digestibilidade", "Sem transgênicos", "Super palatável"],
     },
     "sache-dog-carne": {
@@ -119,57 +119,57 @@
       name: "Enlatado Paté Sabor Carne",
       flavor: "Cães Adultos · 290g",
       image: "assets/images/can-dog-carne.webp",
-      desc: "Paté cozido a vapor, com fórmula fechada e sem corantes ou aromatizantes artificiais.",
-      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem corantes artificiais", "Alta palatabilidade"],
+      desc: "Paté cozido a vapor, com fórmula fechada e sem aromatizantes artificiais.",
+      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem aromatizantes artificiais", "Alta palatabilidade"],
     },
     "can-dog-filhote-carne": {
       name: "Enlatado Paté Sabor Carne",
       flavor: "Cães Filhotes · 290g",
       image: "assets/images/can-dog-filhote-carne.webp",
       desc: "Nutrição completa para o crescimento saudável do filhote, cozido a vapor.",
-      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem corantes artificiais", "Alta palatabilidade"],
+      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem aromatizantes artificiais", "Alta palatabilidade"],
     },
     "can-dog-frango": {
       name: "Enlatado Paté Sabor Frango",
       flavor: "Cães Adultos · 290g",
       image: "assets/images/can-dog-frango.webp",
-      desc: "Paté cozido a vapor, com fórmula fechada e sem corantes ou aromatizantes artificiais.",
-      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem corantes artificiais", "Alta palatabilidade"],
+      desc: "Paté cozido a vapor, com fórmula fechada e sem aromatizantes artificiais.",
+      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem aromatizantes artificiais", "Alta palatabilidade"],
     },
     "can-dog-figado": {
       name: "Enlatado Paté Sabor Fígado",
       flavor: "Cães Adultos · 290g",
       image: "assets/images/can-dog-figado.webp",
-      desc: "Paté cozido a vapor, com fórmula fechada e sem corantes ou aromatizantes artificiais.",
-      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem corantes artificiais", "Alta palatabilidade"],
+      desc: "Paté cozido a vapor, com fórmula fechada e sem aromatizantes artificiais.",
+      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem aromatizantes artificiais", "Alta palatabilidade"],
     },
     "can-cat-frango": {
       name: "Enlatado Paté Sabor Frango",
       flavor: "Gatos Adultos · 290g",
       image: "assets/images/can-cat-frango.webp",
       desc: "Fórmula fechada, desenvolvida para gatos adultos de todas as raças.",
-      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem corantes artificiais", "Para todas as raças"],
+      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem aromatizantes artificiais", "Para todas as raças"],
     },
     "can-cat-carne": {
       name: "Enlatado Paté Sabor Carne",
       flavor: "Gatos Adultos · 290g",
       image: "assets/images/can-cat-carne.webp",
       desc: "Fórmula fechada, desenvolvida para gatos adultos de todas as raças.",
-      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem corantes artificiais", "Para todas as raças"],
+      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem aromatizantes artificiais", "Para todas as raças"],
     },
     "can-cat-figado": {
       name: "Enlatado Paté Sabor Fígado",
       flavor: "Gatos Adultos · 290g",
       image: "assets/images/can-cat-figado.webp",
       desc: "Fórmula fechada, desenvolvida para gatos adultos de todas as raças.",
-      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem corantes artificiais", "Para todas as raças"],
+      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem aromatizantes artificiais", "Para todas as raças"],
     },
     "can-cat-peixe": {
       name: "Enlatado Paté Sabor Peixe",
       flavor: "Gatos Adultos · 290g",
       image: "assets/images/can-cat-peixe.webp",
       desc: "Fórmula fechada, desenvolvida para gatos adultos de todas as raças.",
-      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem corantes artificiais", "Para todas as raças"],
+      benefits: ["Fórmula fechada", "Cozido a vapor", "Sem aromatizantes artificiais", "Para todas as raças"],
     },
     "litter-tradicional": {
       name: "Granulado Higiênico Tradicional",
@@ -455,6 +455,30 @@
     if (el) el.textContent = String(new Date().getFullYear());
   }
 
+  /* ---------- Bloqueio de zoom por pinça (iOS ignora o viewport meta) ---------- */
+  function initPreventPinchZoom() {
+    document.addEventListener("gesturestart", (e) => e.preventDefault());
+    document.addEventListener("gesturechange", (e) => e.preventDefault());
+    document.addEventListener(
+      "touchmove",
+      (e) => {
+        if (e.touches.length > 1) e.preventDefault();
+      },
+      { passive: false }
+    );
+
+    let lastTouchEnd = 0;
+    document.addEventListener(
+      "touchend",
+      (e) => {
+        const now = Date.now();
+        if (now - lastTouchEnd <= 300) e.preventDefault();
+        lastTouchEnd = now;
+      },
+      { passive: false }
+    );
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     initNav();
     initHeaderScroll();
@@ -465,5 +489,6 @@
     initNewsletterForm();
     initBackToTop();
     initFooterYear();
+    initPreventPinchZoom();
   });
 })();

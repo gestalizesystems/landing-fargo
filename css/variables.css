@@ -14,7 +14,6 @@
   --fs-lg: 1.375rem;
   --fs-xl: 1.75rem;
   --fs-2xl: 2.25rem;
-  --fs-3xl: 2.75rem;
 
   --lh-tight: 1.12;
   --lh-snug: 1.3;
@@ -52,6 +51,14 @@
   /* ---------- Superfícies ---------- */
   --surface-light: var(--color-white);
   --surface-muted: var(--color-cream);
+
+  /* ---------- Gradientes premium ---------- */
+  --gradient-brand-soft: linear-gradient(135deg, var(--color-green-50) 0%, var(--color-orange-50) 100%);
+
+  /* ---------- Glassmorphism ---------- */
+  --surface-glass: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-blur: 14px;
 
   /* ---------- Espaçamento ---------- */
   --space-3xs: 0.25rem;

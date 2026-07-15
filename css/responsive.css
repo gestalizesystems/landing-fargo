@@ -9,7 +9,6 @@
 /* ---------- Tablet (min-width: 768px) ---------- */
 @media (min-width: 768px) {
   :root {
-    --fs-3xl: 3.25rem;
     --fs-2xl: 2.5rem;
   }
 
@@ -19,6 +18,10 @@
 
   .hero__title {
     max-width: 16ch;
+  }
+
+  .trust-badge {
+    width: auto;
   }
 
   .about__grid {
@@ -33,6 +36,14 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-bento {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .benefits__grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -45,6 +56,19 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .product-spotlight {
+    grid-template-columns: 280px 1fr;
+    align-items: center;
+  }
+
+  .product-spotlight__media {
+    max-width: none;
+  }
+
+  .product-spotlight__actions {
+    justify-content: flex-start;
+  }
+
   .partners__grid {
     grid-template-columns: repeat(2, 1fr);
     max-width: 640px;
@@ -53,6 +77,15 @@
 
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__bottom {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer__bottom-links {
+    justify-content: flex-start;
   }
 
   .cta-final__actions {
@@ -114,6 +147,10 @@
     align-items: center;
   }
 
+  .hero__actions {
+    justify-content: flex-start;
+  }
+
   .hero__media {
     max-width: none;
   }
@@ -123,8 +160,24 @@
     align-items: start;
   }
 
+  .about__text-col {
+    text-align: left;
+  }
+
+  .partnership__grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .partnership__text {
+    text-align: left;
+  }
+
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .benefits__grid {
@@ -189,8 +242,7 @@
     grid-template-columns: 1.4fr repeat(3, 1fr);
   }
 
-  #beneficios .section__title,
-  #processo .section__title {
+  #beneficios .section__title {
     max-width: none;
     white-space: nowrap;
   }
