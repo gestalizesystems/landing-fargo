@@ -740,16 +740,16 @@ h4 {
   display: grid;
   place-items: center;
   margin-bottom: var(--space-md);
-  color: var(--color-white);
-  background: linear-gradient(135deg, var(--color-green-500), var(--color-green-700));
+  background: var(--color-green-50);
+  color: #1152d4;
 }
 
 .diff-card:nth-child(3n + 2) .diff-card__icon {
-  background: linear-gradient(135deg, #1dabed, #0e76aa);
+  color: #0e76aa;
 }
 
 .diff-card:nth-child(3n + 3) .diff-card__icon {
-  background: linear-gradient(135deg, #202ab6, #141971);
+  color: #202ab6;
 }
 
 .diff-card__icon svg {
@@ -1354,20 +1354,20 @@ h4 {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: var(--color-white);
-  background: linear-gradient(135deg, var(--color-green-500), var(--color-green-700));
+  background: var(--color-green-50);
+  color: #1152d4;
 }
 
 .ingredient-chip:nth-child(4n + 2) .ingredient-chip__icon {
-  background: linear-gradient(135deg, var(--color-orange-500), var(--color-orange-600));
+  color: #0e76aa;
 }
 
 .ingredient-chip:nth-child(4n + 3) .ingredient-chip__icon {
-  background: linear-gradient(135deg, var(--color-brown-500), var(--color-brown-700));
+  color: #202ab6;
 }
 
 .ingredient-chip:nth-child(4n + 4) .ingredient-chip__icon {
-  background: linear-gradient(135deg, var(--color-fargo-mark), var(--color-brown-600));
+  color: #157a93;
 }
 
 .ingredient-chip__icon svg {
