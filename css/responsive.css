@@ -177,10 +177,9 @@
     line-height: var(--lh-normal);
   }
 
-  /* A partir daqui (tablet/desktop) as seções Ingredientes e Nossa
-     Estrutura voltam ao design original — esse ajuste era só mobile.
-     Depoimentos usa o mesmo gradiente azul de #produtos (via
-     --gradient-brand-bold) e as ondas em SVG em todos os tamanhos. */
+  /* A partir daqui (tablet/desktop) as seções Ingredientes, Nossa
+     Estrutura, Depoimentos e Parceria voltam ao design original —
+     todo o ajuste feito nesta rodada era só para o mobile. */
   .ingredients {
     background-color: transparent;
     background-image: url("../assets/images/ingredientes-bg.png?v=2");
@@ -192,6 +191,24 @@
   .estrutura {
     padding-top: 0;
     margin-top: -2rem;
+  }
+
+  .testimonials {
+    background-image: url("../assets/images/testimonials-bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: calc(var(--section-padding) + 3rem);
+    padding-bottom: calc(var(--section-padding) + 15rem);
+  }
+
+  .testimonials-wave {
+    display: none;
+  }
+
+  #parceria {
+    padding-top: var(--section-padding);
+    margin-top: -13rem;
   }
 
   #beneficios {
