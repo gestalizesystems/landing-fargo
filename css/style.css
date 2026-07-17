@@ -1290,7 +1290,7 @@ h4 {
   background-position: bottom center;
   background-repeat: no-repeat;
   padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
+  padding-bottom: calc(var(--section-padding) + 2rem);
 }
 
 .ingredients .eyebrow {
