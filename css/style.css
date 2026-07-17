@@ -247,7 +247,7 @@ h4 {
 .site-header__logo {
   position: absolute;
   z-index: 2;
-  top: 100%;
+  top: calc(100% + 10px);
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
@@ -335,7 +335,7 @@ h4 {
 .site-header__toggle {
   display: grid;
   place-items: center;
-  gap: 3px;
+  gap: 2px;
   width: 44px;
   height: 44px;
   flex-shrink: 0;
