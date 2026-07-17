@@ -26,6 +26,8 @@
   --color-gray-100: #f3f3ef;
   --color-gray-200: #e6e5dd;
   --color-gray-300: #d3d2c6;
+  --color-gray-400: #adaa97;
+  --color-gray-600: #8b8771;
   --color-gray-700: #5b584c;
 
   --color-ink: #23241f;
@@ -38,14 +40,14 @@
   --color-green-700: #0b358e;
   --color-green-800: #07205a;
 
-  --color-orange-50: #fdf0e5;
-  --color-orange-400: #ec9455;
-  --color-orange-500: #e07a30;
-  --color-orange-600: #c2621f;
+  --color-orange-50: #e6e5dd;
+  --color-orange-400: #adaa97;
+  --color-orange-500: #8b8771;
+  --color-orange-600: #5b584c;
 
-  --color-brown-500: #6b4a32;
-  --color-brown-600: #543a28;
-  --color-brown-700: #3c2a1c;
+  --color-brown-500: #d3d2c6;
+  --color-brown-600: #adaa97;
+  --color-brown-700: #8b8771;
 
   --color-fargo-mark: #7c89ad;
 
