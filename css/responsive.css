@@ -205,46 +205,7 @@
   }
 
   #parceria {
-    padding-top: var(--section-padding);
     margin-top: -13rem;
-  }
-
-  /* Restaura o padding original (pré-padronização mobile) das demais
-     seções "planas" a partir daqui — no mobile todas passaram a usar
-     2.5rem/4rem, mas o desktop não deveria mudar. */
-  #por-que-fargo {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  #produtos {
-    padding-top: var(--section-padding);
-    padding-bottom: calc(var(--section-padding) + 2rem);
-  }
-
-  #sobre {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  #diferenciais {
-    padding-top: 4rem;
-    padding-bottom: 1.5rem;
-  }
-
-  #beneficios {
-    padding-top: 8rem;
-    padding-bottom: 5rem;
-  }
-
-  #faq {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .cta-final {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
   }
 
   .benefits__grid {

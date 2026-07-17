@@ -547,14 +547,13 @@ h4 {
 #por-que-fargo {
   position: relative;
   background: #faf8f4;
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
+  padding-block: 4rem;
 }
 
 #diferenciais {
   background: #faf8f4;
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 1.5rem;
 }
 
 .why-grid {
@@ -611,8 +610,7 @@ h4 {
 #sobre {
   position: relative;
   z-index: 1;
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
+  padding-block: 4rem;
 }
 
 .about__grid {
@@ -1000,8 +998,7 @@ h4 {
 #produtos {
   position: relative;
   background: var(--gradient-brand-bold);
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
+  padding-bottom: calc(var(--section-padding) + 2rem);
 }
 
 #produtos > .container {
@@ -1221,8 +1218,8 @@ h4 {
 
 #beneficios {
   position: relative;
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 .beneficios-wave-top {
@@ -1657,7 +1654,6 @@ h4 {
 #parceria {
   position: relative;
   z-index: 1;
-  padding-top: 2.5rem;
   padding-bottom: 4rem;
 }
 
@@ -1737,8 +1733,7 @@ h4 {
 #faq {
   position: relative;
   background: #faf8f4;
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
+  padding-block: 4rem;
 }
 
 .faq__list {
@@ -1818,8 +1813,6 @@ h4 {
   background: linear-gradient(135deg, var(--color-green-700), var(--color-green-500));
   color: var(--color-white);
   text-align: center;
-  padding-top: 2.5rem;
-  padding-bottom: 4rem;
 }
 
 .cta-final__inner {
