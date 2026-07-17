@@ -10,30 +10,28 @@
 @media (min-width: 768px) {
   :root {
     --fs-2xl: 2.5rem;
-  }
-
-  .header__cta {
-    display: inline-flex;
+    --header-top-h: 84px;
+    --header-badge-w: 400px;
+    --header-badge-h: 74px;
+    --header-nav-radius: 56px;
   }
 
   .hero__title {
     max-width: 16ch;
   }
 
-  .trust-badge {
-    width: auto;
-  }
-
   .about__grid {
     grid-template-columns: 1fr;
   }
 
-  .pillars {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .species-switch {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
   }
 
   .why-grid {
@@ -79,15 +77,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer__bottom {
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .footer__bottom-links {
-    justify-content: flex-start;
-  }
-
   .cta-final__actions {
     flex-wrap: nowrap;
   }
@@ -99,46 +88,11 @@
     --section-padding: var(--space-3xl);
   }
 
-  /* Navegação horizontal fixa, sem menu off-canvas */
-  .nav {
-    position: static;
-    inset: auto;
-    transform: none;
-    background: none;
-    display: block;
+  .site-header__nav-inner {
+    display: flex;
   }
 
-  .nav__list {
-    flex-direction: row;
-    align-items: center;
-    gap: var(--space-lg);
-    padding: 0;
-  }
-
-  .nav__link {
-    font-family: var(--font-body);
-    font-size: var(--fs-sm);
-    font-weight: 600;
-    position: relative;
-  }
-
-  .nav__link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: var(--color-orange-500);
-    transition: width var(--duration-fast) var(--ease-standard);
-  }
-
-  .nav__link:hover::after {
-    width: 100%;
-  }
-
-  .nav__close,
-  .nav__toggle {
+  .site-header__toggle {
     display: none;
   }
 
@@ -189,13 +143,14 @@
     justify-content: center;
   }
 
-  #painel-caes .products__grid {
+  #painel-caes-secos .products__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  #painel-gatos .products__grid,
-  #painel-enlatados .products__grid,
-  #painel-granulado .products__grid {
+  #painel-caes-umidos .products__grid,
+  #painel-gatos-secos .products__grid,
+  #painel-gatos-umidos .products__grid,
+  #painel-gatos-granulado .products__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
