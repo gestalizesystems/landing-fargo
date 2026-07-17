@@ -1218,7 +1218,7 @@ h4 {
 
 #beneficios {
   position: relative;
-  padding-top: 8rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
@@ -1468,8 +1468,8 @@ h4 {
 .testimonials {
   position: relative;
   background: var(--gradient-brand-bold);
-  padding-top: calc(var(--section-padding) + 3rem);
-  padding-bottom: calc(var(--section-padding) + 3rem);
+  padding-top: calc(var(--section-padding) + 1rem);
+  padding-bottom: calc(var(--section-padding) + 1rem);
 }
 
 .testimonials > .container {
@@ -1654,6 +1654,7 @@ h4 {
 #parceria {
   position: relative;
   z-index: 1;
+  padding-top: 3.5rem;
   padding-bottom: 4rem;
 }
 

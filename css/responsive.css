@@ -205,7 +205,12 @@
   }
 
   #parceria {
+    padding-top: var(--section-padding);
     margin-top: -13rem;
+  }
+
+  #beneficios {
+    padding-top: 8rem;
   }
 
   .benefits__grid {
