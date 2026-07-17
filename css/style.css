@@ -82,7 +82,7 @@ h4 {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #545454;
+  color: var(--color-green-800);
   margin-bottom: var(--space-sm);
 }
 
@@ -90,7 +90,7 @@ h4 {
   content: "";
   width: 22px;
   height: 2px;
-  background: var(--color-orange-500);
+  background: var(--color-green-800);
   border-radius: var(--radius-pill);
 }
 
@@ -431,7 +431,7 @@ h4 {
   padding: 0.4rem 0.9rem 0.4rem 0.4rem;
   font-size: var(--fs-xs);
   font-weight: 700;
-  color: var(--color-brown-600);
+  color: var(--color-green-600);
   margin-bottom: var(--space-md);
 }
 
@@ -1007,7 +1007,11 @@ h4 {
 }
 
 #produtos .eyebrow {
-  color: var(--color-orange-400);
+  color: var(--color-white);
+}
+
+#produtos .eyebrow::before {
+  background: var(--color-white);
 }
 
 #produtos .section__title,
@@ -1312,7 +1316,11 @@ h4 {
 }
 
 .ingredients .eyebrow {
-  color: var(--color-orange-400);
+  color: var(--color-white);
+}
+
+.ingredients .eyebrow::before {
+  background: var(--color-white);
 }
 
 .ingredients .section__title,
@@ -1518,7 +1526,11 @@ h4 {
 }
 
 .testimonials .eyebrow {
-  color: var(--color-orange-400);
+  color: var(--color-white);
+}
+
+.testimonials .eyebrow::before {
+  background: var(--color-white);
 }
 
 .testimonials .section__title {
