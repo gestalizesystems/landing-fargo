@@ -399,7 +399,6 @@ h4 {
 /* ---------- 4. Hero ---------- */
 
 .hero {
-  display: none;
   position: relative;
   padding-block-start: var(--space-2xl);
   padding-block-end: var(--space-md);
@@ -470,6 +469,7 @@ h4 {
 }
 
 .hero__media {
+  display: none;
   position: relative;
   justify-self: center;
   width: 100%;
@@ -638,7 +638,7 @@ h4 {
 }
 
 .about__cat-peek {
-  display: block;
+  display: none;
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -799,8 +799,10 @@ h4 {
 
 .products__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--space-sm);
+  max-width: 340px;
+  margin-inline: auto;
 }
 
 .product-card {
@@ -892,7 +894,7 @@ h4 {
 
 .product-card__actions {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: var(--space-2xs);
 }
 
@@ -903,18 +905,18 @@ h4 {
 /* Card em destaque no topo da linha de produtos */
 .product-spotlight {
   display: grid;
-  gap: var(--space-lg);
+  gap: var(--space-sm);
   background: var(--gradient-brand-soft);
   border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
   box-shadow: var(--shadow-md);
 }
 
 .product-spotlight__media {
   justify-self: center;
   width: 100%;
-  max-width: 260px;
+  max-width: 180px;
 }
 
 .product-spotlight__media img {
@@ -938,7 +940,7 @@ h4 {
 }
 
 .product-spotlight__title {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-lg);
   margin-bottom: var(--space-xs);
 }
 
@@ -1097,10 +1099,10 @@ h4 {
 
 .species-switch {
   display: grid;
-  gap: var(--space-sm);
+  gap: 95px;
   max-width: 640px;
   margin-inline: auto;
-  margin-top: 58px;
+  margin-top: 120px;
   margin-bottom: var(--space-lg);
 }
 

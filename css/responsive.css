@@ -16,7 +16,11 @@
     --header-nav-radius: 56px;
   }
 
-  .hero {
+  .hero__media {
+    display: block;
+  }
+
+  .about__cat-peek {
     display: block;
   }
 
@@ -107,10 +111,17 @@
   .product-spotlight {
     grid-template-columns: 280px 1fr;
     align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
   }
 
   .product-spotlight__media {
     max-width: none;
+  }
+
+  .product-spotlight__title {
+    font-size: var(--fs-xl);
   }
 
   .product-spotlight__actions {
