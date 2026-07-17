@@ -86,8 +86,47 @@
     height: 62px;
   }
 
+  /* Cards "Por que a Fargo": no mobile viram retângulo (ícone à
+     esquerda, texto à direita); a partir daqui voltam ao card
+     original em grade (glass, ícone no topo). */
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-card {
+    display: block;
+    align-items: initial;
+    padding: var(--space-lg);
+    background: var(--surface-glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  }
+
+  .why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .why-card__icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    margin-bottom: var(--space-sm);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .why-card__icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .why-card__title {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--space-2xs);
   }
 
   .stat-bento {
@@ -151,6 +190,14 @@
 
   .cta-final__actions {
     flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .cta-final__actions .btn {
+    flex: none;
+    padding: 1.15rem 2.25rem;
+    font-size: var(--fs-md);
+    white-space: nowrap;
   }
 }
 
@@ -185,7 +232,15 @@
   }
 
   .hero__actions {
+    flex-wrap: wrap;
     justify-content: flex-start;
+  }
+
+  .hero__actions .btn {
+    flex: none;
+    padding: 1.15rem 2.25rem;
+    font-size: var(--fs-md);
+    white-space: nowrap;
   }
 
   .hero__media {

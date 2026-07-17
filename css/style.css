@@ -462,10 +462,17 @@ h4 {
 
 .hero__actions {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-sm);
+  flex-wrap: nowrap;
+  gap: var(--space-2xs);
   margin-bottom: var(--space-xl);
+}
+
+.hero__actions .btn {
+  flex: 1;
+  padding: 0.75rem 0.5rem;
+  font-size: var(--fs-xs);
+  white-space: normal;
+  text-align: center;
 }
 
 .stat__number {
@@ -555,42 +562,42 @@ h4 {
 }
 
 .why-card {
-  padding: var(--space-lg);
-  background: var(--surface-glass);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  backdrop-filter: blur(var(--glass-blur)) saturate(160%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
   transition: transform var(--duration-base) var(--ease-out-soft),
     box-shadow var(--duration-base) var(--ease-out-soft);
 }
 
 .why-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .why-card__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  background: var(--color-white);
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  background: var(--color-green-50);
   color: var(--color-green-600);
   display: grid;
   place-items: center;
-  margin-bottom: var(--space-sm);
-  box-shadow: var(--shadow-sm);
 }
 
 .why-card__icon svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
 }
 
 .why-card__title {
-  font-size: var(--fs-lg);
-  margin-bottom: var(--space-2xs);
+  font-size: var(--fs-base);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
 }
 
 .why-card__text {
@@ -1669,7 +1676,8 @@ h4 {
 
 .partners__grid {
   display: grid;
-  gap: var(--space-md);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
   align-items: center;
 }
 
@@ -1802,9 +1810,16 @@ h4 {
 
 .cta-final__actions {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-sm);
+  flex-wrap: nowrap;
+  gap: var(--space-2xs);
+}
+
+.cta-final__actions .btn {
+  flex: 1;
+  padding: 0.75rem 0.5rem;
+  font-size: var(--fs-xs);
+  white-space: normal;
+  text-align: center;
 }
 
 .cta-final .btn--outline {
