@@ -16,6 +16,10 @@
     --header-nav-radius: 56px;
   }
 
+  .site-header__logo img {
+    transform: translateY(-26px);
+  }
+
   .hero__media {
     display: block;
   }
