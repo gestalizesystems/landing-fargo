@@ -98,6 +98,7 @@
   .species-peek--cat {
     height: 220px;
     bottom: 55px;
+    z-index: 0;
   }
 
   .species-peek--cat-paw {
