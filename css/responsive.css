@@ -289,6 +289,16 @@
     --section-padding: var(--space-3xl);
   }
 
+  /* overflow-x:hidden no <html> (necessário no mobile pra travar o
+     pan horizontal no Safari) tem um efeito colateral conhecido no
+     Safari de desktop: quebra o scroll por gesto do trackpad
+     (momentum/rubber-band), deixando só a barra de rolagem funcionar.
+     A partir do notebook o layout já não depende mais desse trava,
+     então volta ao padrão. */
+  html {
+    overflow-x: visible;
+  }
+
   /* Patinhas decorativas: só fazem sentido na grade de produtos larga
      (3-4 colunas), que só existe a partir daqui. Em mobile/tablet elas
      ficam escondidas para não sobrepor os cards. */
