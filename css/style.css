@@ -82,7 +82,7 @@ h4 {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-green-800);
+  color: #004aad;
   margin-bottom: var(--space-sm);
 }
 
@@ -90,7 +90,7 @@ h4 {
   content: "";
   width: 22px;
   height: 2px;
-  background: var(--color-green-800);
+  background: #004aad;
   border-radius: var(--radius-pill);
 }
 
@@ -98,7 +98,6 @@ h4 {
   font-size: clamp(2rem, 1.6vw + 1.7rem, 2.75rem);
   line-height: var(--lh-tight);
   margin-bottom: var(--space-md);
-  color: #004aad;
 }
 
 .section__header--center .section__title,
