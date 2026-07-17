@@ -31,9 +31,7 @@
   .produtos-wave--top,
   .produtos-wave--bottom,
   .beneficios-wave-top,
-  .cta-final-wave,
-  .testimonials-wave--top,
-  .testimonials-wave--bottom {
+  .cta-final-wave {
     transform: none;
   }
 
@@ -171,6 +169,39 @@
   .estrutura .stat__label {
     font-size: var(--fs-xs);
     line-height: var(--lh-normal);
+  }
+
+  /* A partir daqui (tablet/desktop) as seções Ingredientes, Nossa
+     Estrutura, Depoimentos e Parceria voltam ao design original —
+     todo o ajuste feito nesta rodada era só para o mobile. */
+  .ingredients {
+    background-color: transparent;
+    background-image: url("../assets/images/ingredientes-bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+    padding-bottom: calc(var(--section-padding) + 9rem);
+  }
+
+  .estrutura {
+    padding-top: 0;
+    margin-top: -2rem;
+  }
+
+  .testimonials {
+    background-image: url("../assets/images/testimonials-bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: calc(var(--section-padding) + 3rem);
+    padding-bottom: calc(var(--section-padding) + 15rem);
+  }
+
+  .testimonials-wave {
+    display: none;
+  }
+
+  #parceria {
+    margin-top: -13rem;
   }
 
   .benefits__grid {
