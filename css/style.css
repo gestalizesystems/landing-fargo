@@ -1290,7 +1290,7 @@ h4 {
   background-position: bottom center;
   background-repeat: no-repeat;
   padding-top: 3.5rem;
-  padding-bottom: calc(var(--section-padding) + 3rem);
+  padding-bottom: var(--section-padding);
 }
 
 .ingredients .eyebrow {
@@ -1402,12 +1402,8 @@ h4 {
 }
 
 .estrutura {
-  /* Encosta em #ingredientes, que já reserva espaço extra embaixo para a
-     curva da própria imagem de fundo — por isso o topo fica sem padding. */
   position: relative;
   z-index: 1;
-  padding-top: 0;
-  margin-top: -2rem;
   padding-bottom: 4rem;
 }
 
