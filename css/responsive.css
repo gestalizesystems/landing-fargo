@@ -16,8 +16,19 @@
     --header-nav-radius: 56px;
   }
 
+  .hero {
+    display: block;
+  }
+
   .hero__title {
     max-width: 16ch;
+  }
+
+  .produtos-wave--top,
+  .produtos-wave--bottom,
+  .beneficios-wave-top,
+  .cta-final-wave {
+    transform: none;
   }
 
   .about__grid {
@@ -32,6 +43,37 @@
   .species-switch {
     grid-template-columns: repeat(2, 1fr);
     max-width: none;
+    gap: var(--space-md);
+    margin-top: 280px;
+    margin-bottom: var(--space-xl);
+  }
+
+  .species-card {
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--fs-lg);
+  }
+
+  .species-card__icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .species-card__icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .species-peek--dog {
+    height: 300px;
+  }
+
+  .species-peek--cat {
+    height: 220px;
+  }
+
+  .species-peek--cat-paw {
+    height: 62px;
   }
 
   .why-grid {
@@ -51,7 +93,15 @@
   }
 
   .products__grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .product-card__body {
+    padding: var(--space-md);
+  }
+
+  .product-card__actions {
+    flex-direction: row;
   }
 
   .product-spotlight {
@@ -86,6 +136,13 @@
 @media (min-width: 1024px) {
   :root {
     --section-padding: var(--space-3xl);
+  }
+
+  /* Patinhas decorativas: só fazem sentido na grade de produtos larga
+     (3-4 colunas), que só existe a partir daqui. Em mobile/tablet elas
+     ficam escondidas para não sobrepor os cards. */
+  .produtos-paw {
+    display: block;
   }
 
   .site-header__nav-inner {

@@ -472,18 +472,12 @@
     if (el) el.textContent = String(new Date().getFullYear());
   }
 
-  /* ---------- Bloqueio de zoom por pinça (iOS ignora o viewport meta) ---------- */
+  /* ---------- Bloqueio de zoom por duplo toque (iOS ignora o viewport meta) ----------
+     Nota: a prevenção de pinça em si fica só por CSS (touch-action: manipulation,
+     ver style.css). Chegou a existir aqui um bloqueio via "gesturestart"/"gesturechange",
+     mas esses eventos proprietários do WebKit disputam o reconhecimento do gesto com o
+     próprio Safari e podem acionar o seletor de abas ao pinçar — por isso foram removidos. */
   function initPreventPinchZoom() {
-    document.addEventListener("gesturestart", (e) => e.preventDefault());
-    document.addEventListener("gesturechange", (e) => e.preventDefault());
-    document.addEventListener(
-      "touchmove",
-      (e) => {
-        if (e.touches.length > 1) e.preventDefault();
-      },
-      { passive: false }
-    );
-
     let lastTouchEnd = 0;
     document.addEventListener(
       "touchend",
