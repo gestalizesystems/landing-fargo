@@ -182,7 +182,7 @@
      todo o ajuste feito nesta rodada era só para o mobile. */
   .ingredients {
     background-color: transparent;
-    background-image: url("../assets/images/ingredientes-bg.png");
+    background-image: url("../assets/images/ingredientes-bg.png?v=2");
     background-size: 100% 100%;
     background-position: center;
     padding-bottom: calc(var(--section-padding) + 9rem);
