@@ -989,7 +989,7 @@ h4 {
 
 #produtos {
   position: relative;
-  background: var(--gradient-brand-bold);
+  background: #004aad;
   padding-bottom: calc(var(--section-padding) + 2rem);
 }
 
@@ -1805,9 +1805,17 @@ h4 {
 
 .cta-final {
   position: relative;
-  background: linear-gradient(135deg, var(--color-green-700), var(--color-green-500));
+  background: #004aad;
   color: var(--color-white);
   text-align: center;
+}
+
+.cta-final .eyebrow {
+  color: var(--color-white);
+}
+
+.cta-final .eyebrow::before {
+  background: var(--color-white);
 }
 
 .cta-final__inner {
