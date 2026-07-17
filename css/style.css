@@ -1284,9 +1284,10 @@ h4 {
 
 .ingredients {
   position: relative;
+  background-color: #123121;
   background-image: url("../assets/images/ingredientes-bg.png");
-  background-size: 100% 100%;
-  background-position: center;
+  background-size: 100% auto;
+  background-position: bottom center;
   background-repeat: no-repeat;
   padding-top: 3.5rem;
   padding-bottom: calc(var(--section-padding) + 9rem);
@@ -1368,7 +1369,8 @@ h4 {
 
 .stat-bento {
   display: grid;
-  gap: var(--space-sm);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xs);
   max-width: 720px;
   margin-inline: auto;
   margin-bottom: var(--space-xl);
@@ -1376,7 +1378,7 @@ h4 {
 
 .stat-bento__cell {
   text-align: center;
-  padding: var(--space-lg) var(--space-sm);
+  padding: var(--space-sm) var(--space-3xs);
   border-radius: var(--radius-md);
   background: var(--color-white);
   box-shadow: var(--shadow-sm);
@@ -1385,18 +1387,18 @@ h4 {
 .stat-bento__icon {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   margin-inline: auto;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-2xs);
   border-radius: 50%;
   background: var(--color-green-50);
   color: var(--color-green-600);
 }
 
 .stat-bento__icon svg {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 .estrutura {
@@ -1410,7 +1412,12 @@ h4 {
 }
 
 .estrutura .stat__number {
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-lg);
+}
+
+.estrutura .stat__label {
+  font-size: 0.7rem;
+  line-height: 1.25;
 }
 
 .process__timeline {
@@ -1463,12 +1470,36 @@ h4 {
 
 .testimonials {
   position: relative;
-  background-image: url("../assets/images/testimonials-bg.png");
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: var(--gradient-brand-bold);
   padding-top: calc(var(--section-padding) + 3rem);
-  padding-bottom: calc(var(--section-padding) + 15rem);
+  padding-bottom: calc(var(--section-padding) + 3rem);
+}
+
+.testimonials > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ondas curvas no início e no final da parte verde */
+.testimonials-wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonials-wave--top {
+  top: -1px;
+  transform: scaleY(0.45);
+  transform-origin: top;
+}
+
+.testimonials-wave--bottom {
+  bottom: -1px;
+  transform: scaleY(0.45);
+  transform-origin: bottom;
 }
 
 .testimonials .eyebrow {
@@ -1504,7 +1535,7 @@ h4 {
 
 .testimonial-card {
   flex: 0 0 100%;
-  padding: var(--space-lg);
+  padding: var(--space-md);
   background: var(--color-white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -1547,10 +1578,10 @@ h4 {
 
 .testimonial__quote {
   font-family: var(--font-display);
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   line-height: var(--lh-snug);
   color: var(--color-ink);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .testimonial__author {
@@ -1561,8 +1592,8 @@ h4 {
 }
 
 .testimonial__avatar {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--color-gray-200);
@@ -1624,11 +1655,8 @@ h4 {
 /* ---------- 12. Parceria Comercial ---------- */
 
 #parceria {
-  /* Encosta em #depoimentos, que reserva espaço extra embaixo para a
-     curva da própria imagem de fundo — daí o margin-top negativo. */
   position: relative;
   z-index: 1;
-  margin-top: -13rem;
   padding-bottom: 4rem;
 }
 

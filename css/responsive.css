@@ -31,8 +31,24 @@
   .produtos-wave--top,
   .produtos-wave--bottom,
   .beneficios-wave-top,
-  .cta-final-wave {
+  .cta-final-wave,
+  .testimonials-wave--top,
+  .testimonials-wave--bottom {
     transform: none;
+  }
+
+  .testimonial-card {
+    padding: var(--space-lg);
+  }
+
+  .testimonial__quote {
+    font-size: var(--fs-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .testimonial__avatar {
+    width: 48px;
+    height: 48px;
   }
 
   .about__grid {
@@ -130,7 +146,31 @@
   }
 
   .stat-bento {
-    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .stat-bento__cell {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .stat-bento__icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: var(--space-sm);
+  }
+
+  .stat-bento__icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .estrutura .stat__number {
+    font-size: var(--fs-2xl);
+  }
+
+  .estrutura .stat__label {
+    font-size: var(--fs-xs);
+    line-height: var(--lh-normal);
   }
 
   .benefits__grid {
@@ -279,6 +319,8 @@
   .products__grid {
     grid-template-columns: repeat(auto-fit, minmax(260px, 280px));
     justify-content: center;
+    max-width: none;
+    margin-inline: 0;
   }
 
   #painel-caes-secos .products__grid {
