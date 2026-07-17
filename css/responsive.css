@@ -175,6 +175,10 @@
     display: none;
   }
 
+  .site-header__social {
+    display: flex;
+  }
+
   .hero__inner {
     grid-template-columns: 1fr 1.05fr;
     align-items: center;
