@@ -1127,13 +1127,12 @@ h4 {
 
 .species-peek--cat {
   right: 3%;
-  bottom: 15px;
   height: 92px;
 }
 
 .species-peek--cat-paw {
+  display: none;
   right: 3%;
-  bottom: 15px;
   height: 26px;
   z-index: 2;
 }
