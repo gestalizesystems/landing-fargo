@@ -176,46 +176,89 @@
         <path d="M10.5 11.5L12 13l1.5-1.5" />
         <path d="M6 8l3-2.5 3 2 3-2 3 2.5" />
       </symbol>
+      <symbol id="icon-dog" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6.5 9c-1.8-1.2-2.8-3.3-2.3-5.8 2.2.3 4 1.7 4.8 3.6" />
+        <path d="M17.5 9c1.8-1.2 2.8-3.3 2.3-5.8-2.2.3-4 1.7-4.8 3.6" />
+        <circle cx="12" cy="14" r="6.3" />
+        <circle cx="12" cy="16.8" r="0.9" fill="currentColor" stroke="none" />
+      </symbol>
+      <symbol id="icon-cat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6.5 10L5 4.5l4.8 3.8" />
+        <path d="M17.5 10L19 4.5l-4.8 3.8" />
+        <circle cx="12" cy="14.3" r="6" />
+        <path d="M12 15.3l-1 1M12 15.3l1 1" />
+      </symbol>
     </defs>
   </svg>
 
   <!-- ================= HEADER ================= -->
-  <header class="header" id="header" data-header>
-    <div class="container header__inner">
-      <a class="logo" href="#topo" aria-label="Fargo Premium — página inicial">
-        <img src="assets/images/fargo-logo.png" alt="Fargo" width="120" height="40" />
-        <span class="logo__badge">Premium</span>
-      </a>
-
-      <nav class="nav" id="nav" data-nav aria-label="Navegação principal">
-        <button class="nav__close" type="button" data-nav-close aria-label="Fechar menu">
-          <svg width="22" height="22"><use href="#icon-close"></use></svg>
-        </button>
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#produtos" data-nav-link>Produtos</a></li>
-          <li class="nav__item"><a class="nav__link" href="#diferenciais" data-nav-link>Diferenciais</a></li>
-          <li class="nav__item"><a class="nav__link" href="#estrutura" data-nav-link>Estrutura</a></li>
-          <li class="nav__item"><a class="nav__link" href="#depoimentos" data-nav-link>Depoimentos</a></li>
-          <li class="nav__item"><a class="nav__link" href="#parceria" data-nav-link>Parceria</a></li>
-          <li class="nav__item"><a class="nav__link" href="#faq" data-nav-link>FAQ</a></li>
+  <header class="site-header" data-site-header>
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <ul class="site-header__social" aria-label="Redes sociais da Fargo">
+          <li>
+            <a class="site-header__social-link" href="#" aria-label="Fargo no Instagram">
+              <svg aria-hidden="true"><use href="#icon-instagram"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="site-header__social-link" href="#" aria-label="Fargo no Facebook">
+              <svg aria-hidden="true"><use href="#icon-facebook"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="site-header__social-link" href="#" aria-label="Fargo no WhatsApp">
+              <svg aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+            </a>
+          </li>
         </ul>
-      </nav>
+      </div>
 
-      <a class="btn btn--dark btn--sm header__cta" href="#produtos">Comprar Fargo</a>
-
-      <button class="nav__toggle" type="button" data-nav-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-        <span class="nav__toggle-bars"><span></span><span></span><span></span></span>
-      </button>
+      <a class="site-header__logo" href="#topo" aria-label="Fargo — página inicial">
+        <svg class="site-header__logo-shape" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M18,44 L63,15 Q75,8 89,8 L211,8 Q225,8 237,15 L282,44 Q294,50 282,56 L237,85 Q225,92 211,92 L89,92 Q75,92 63,85 L18,56 Q6,50 18,44 Z" fill="var(--color-green-800)" />
+        </svg>
+        <span class="site-header__logo-tag">Premium</span>
+        <img src="assets/images/fargo-logo-white.png" alt="Fargo" width="164" height="56" />
+      </a>
     </div>
+
+    <nav class="site-header__nav" aria-label="Navegação principal">
+      <div class="container site-header__nav-inner">
+        <ul class="site-header__menu site-header__menu--start">
+          <li><a class="site-header__link" href="#produtos">Produtos</a></li>
+          <li><a class="site-header__link" href="#faq">Perguntas</a></li>
+        </ul>
+        <ul class="site-header__menu site-header__menu--end">
+          <li><a class="site-header__link" href="#sobre">Sobre</a></li>
+          <li><a class="site-header__link" href="#onde-comprar">Comprar Fargo</a></li>
+        </ul>
+      </div>
+
+      <button class="site-header__toggle" type="button" data-menu-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="site-header__toggle-bar"></span>
+        <span class="site-header__toggle-bar"></span>
+        <span class="site-header__toggle-bar"></span>
+      </button>
+    </nav>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+    <button class="mobile-menu__close" type="button" data-menu-close aria-label="Fechar menu">
+      <svg aria-hidden="true"><use href="#icon-close"></use></svg>
+    </button>
+    <ul class="mobile-menu__list">
+      <li><a href="#produtos" data-menu-link>Produtos</a></li>
+      <li><a href="#faq" data-menu-link>Perguntas</a></li>
+      <li><a href="#sobre" data-menu-link>Sobre</a></li>
+      <li><a href="#onde-comprar" data-menu-link>Comprar Fargo</a></li>
+    </ul>
+  </div>
 
   <main id="topo">
 
     <!-- ================= HERO ================= -->
     <section class="hero">
-      <div class="hero__decor hero__decor--1" aria-hidden="true"></div>
-      <div class="hero__decor hero__decor--2" aria-hidden="true"></div>
-
       <div class="container hero__inner">
         <div class="hero__content">
           <span class="hero__eyebrow reveal" data-reveal="up">
@@ -238,24 +281,6 @@
             <a class="btn btn--outline btn--lg" href="#produtos">Conheça a Linha</a>
           </div>
 
-          <ul class="hero__trust-badges reveal" data-reveal="up" style="--reveal-delay:.4s">
-            <li class="trust-badge">
-              <span class="trust-badge__icon"><svg><use href="#icon-drumstick"></use></svg></span>
-              <span class="trust-badge__label">Proteína de alta qualidade</span>
-            </li>
-            <li class="trust-badge">
-              <span class="trust-badge__icon"><svg><use href="#icon-leaf"></use></svg></span>
-              <span class="trust-badge__label">Ingredientes cuidadosamente selecionados</span>
-            </li>
-            <li class="trust-badge">
-              <span class="trust-badge__icon"><svg><use href="#icon-shield-check"></use></svg></span>
-              <span class="trust-badge__label">Nutrição completa e balanceada</span>
-            </li>
-            <li class="trust-badge">
-              <span class="trust-badge__icon"><svg><use href="#icon-flask"></use></svg></span>
-              <span class="trust-badge__label">Desenvolvido por especialistas em nutrição animal</span>
-            </li>
-          </ul>
         </div>
 
         <div class="hero__media reveal" data-reveal="scale" style="--reveal-delay:.2s">
@@ -324,6 +349,15 @@
 
     <!-- ================= LINHA DE PRODUTOS ================= -->
     <section class="section" id="produtos">
+      <svg class="produtos-wave produtos-wave--top" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,0 L1440,0 L1440,35 C1200,100 960,10 720,70 C480,105 240,15 0,85 Z" fill="#faf8f4" />
+      </svg>
+      <svg class="produtos-wave produtos-wave--bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,120 L1440,120 L1440,65 C1200,30 960,85 720,55 C480,25 240,75 0,45 Z" fill="var(--surface-light)" />
+      </svg>
+      <svg class="produtos-paw produtos-paw--2" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+      <svg class="produtos-paw produtos-paw--7" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+      <svg class="produtos-paw produtos-paw--9" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
       <div class="container">
         <div class="section__header section__header--center reveal" data-reveal="up">
           <span class="eyebrow">Linha de Produtos</span>
@@ -351,18 +385,37 @@
           </div>
         </article>
 
-        <div class="tabs">
-          <div class="tabs__list" role="tablist" aria-label="Filtrar produtos por categoria">
-            <button class="tabs__btn is-active" type="button" role="tab" aria-selected="true" aria-controls="painel-caes" id="tab-caes" data-tab="caes">Cães</button>
-            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-gatos" id="tab-gatos" data-tab="gatos">Gatos</button>
-            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-saches" id="tab-saches" data-tab="saches">Sachês</button>
-            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-enlatados" id="tab-enlatados" data-tab="enlatados">Enlatados</button>
-            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-granulado" id="tab-granulado" data-tab="granulado">Granulado Higiênico</button>
+        <div class="species-switch" role="tablist" aria-label="Escolha a espécie">
+          <div class="species-card-wrap">
+            <img class="species-peek species-peek--dog" src="assets/images/species-peek-dog.png" alt="" aria-hidden="true" />
+            <button class="species-card is-active" type="button" role="tab" aria-selected="true" aria-controls="species-panel-caes" id="species-tab-caes" data-species-tab="caes">
+              <span class="species-card__icon"><svg><use href="#icon-dog"></use></svg></span>
+              <span class="species-card__label">Cães</span>
+            </button>
+          </div>
+          <div class="species-card-wrap">
+            <img class="species-peek species-peek--cat" src="assets/images/species-peek-cat.png" alt="" aria-hidden="true" />
+            <button class="species-card" type="button" role="tab" aria-selected="false" aria-controls="species-panel-gatos" id="species-tab-gatos" data-species-tab="gatos">
+              <span class="species-card__icon"><svg><use href="#icon-cat"></use></svg></span>
+              <span class="species-card__label">Gatos</span>
+            </button>
+            <img class="species-peek species-peek--cat-paw" src="assets/images/species-peek-cat-paw.png" alt="" aria-hidden="true" />
           </div>
         </div>
 
-        <div class="products__panel is-active" id="painel-caes" role="tabpanel" aria-labelledby="tab-caes" data-panel="caes">
-          <div class="products__grid">
+        <div class="species-panel is-active" id="species-panel-caes" role="tabpanel" aria-labelledby="species-tab-caes" data-species-panel="caes">
+          <div class="tabs">
+            <div class="tabs__list" role="tablist" aria-label="Categoria para cães">
+              <button class="tabs__btn is-active" type="button" role="tab" aria-selected="true" aria-controls="painel-caes-secos" id="tab-caes-secos" data-category-tab="secos">Secos</button>
+              <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-caes-umidos" id="tab-caes-umidos" data-category-tab="umidos">Úmidos</button>
+            </div>
+          </div>
+
+          <div class="products__panel is-active" id="painel-caes-secos" role="tabpanel" aria-labelledby="tab-caes-secos" data-panel="secos">
+            <svg class="produtos-paw produtos-paw--10" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--3" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--4" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <div class="products__grid">
 
             <article class="product-card reveal" data-reveal="up">
               <div class="product-card__media">
@@ -444,11 +497,138 @@
               </div>
             </article>
 
+            </div>
+          </div>
+
+          <div class="products__panel" id="painel-caes-umidos" role="tabpanel" aria-labelledby="tab-caes-umidos" data-panel="umidos" hidden>
+            <svg class="produtos-paw produtos-paw--10" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--3" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--4" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <div class="products__grid">
+            <article class="product-card reveal" data-reveal="up">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/pouch-dog-cordeiro.webp" alt="Sachê Fargo Premium Especial Cordeiro ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sachê Cordeiro ao Molho</h3>
+                <p class="product-card__flavor">100g · Cozido a vapor</p>
+                <p class="product-card__desc">Elaborado com carnes selecionadas, sem aromatizantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-dog-cordeiro">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/pouch-dog-carne.webp" alt="Sachê Fargo Premium Especial Carne ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sachê Carne ao Molho</h3>
+                <p class="product-card__flavor">100g · Cozido a vapor</p>
+                <p class="product-card__desc">Ingredientes naturais e alta palatabilidade para o dia a dia do seu cão.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-dog-carne">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/pouch-dog-frango.webp" alt="Sachê Fargo Premium Especial Frango ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sachê Frango ao Molho</h3>
+                <p class="product-card__flavor">100g · Cozido a vapor</p>
+                <p class="product-card__desc">Saboroso e nutritivo, sem transgênicos ou conservantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-dog-frango">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card reveal" data-reveal="up">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/can-dog-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-carne">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Filhotes</span>
+                <img src="assets/images/can-dog-filhote-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para cães filhotes" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Nutrição completa para o crescimento saudável do filhote.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-filhote-carne">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/can-dog-frango.webp" alt="Enlatado Fargo Premium Especial sabor frango para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Frango</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-frango">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.18s">
+              <div class="product-card__media">
+                <span class="product-card__tag">Cães Adultos</span>
+                <img src="assets/images/can-dog-figado.webp" alt="Enlatado Fargo Premium Especial sabor fígado para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Enlatado Paté Sabor Fígado</h3>
+                <p class="product-card__flavor">290g · Cozido a vapor</p>
+                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
+                <div class="product-card__actions">
+                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
+                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-figado">Saiba Mais</button>
+                </div>
+              </div>
+            </article>
+
+            </div>
           </div>
         </div>
 
-        <div class="products__panel" id="painel-gatos" role="tabpanel" aria-labelledby="tab-gatos" data-panel="gatos" hidden>
-          <div class="products__grid">
+        <div class="species-panel" id="species-panel-gatos" role="tabpanel" aria-labelledby="species-tab-gatos" data-species-panel="gatos" hidden>
+          <div class="tabs">
+            <div class="tabs__list" role="tablist" aria-label="Categoria para gatos">
+              <button class="tabs__btn is-active" type="button" role="tab" aria-selected="true" aria-controls="painel-gatos-secos" id="tab-gatos-secos" data-category-tab="secos">Secos</button>
+              <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-gatos-umidos" id="tab-gatos-umidos" data-category-tab="umidos">Úmidos</button>
+              <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="painel-gatos-granulado" id="tab-gatos-granulado" data-category-tab="granulado">Granulado</button>
+            </div>
+          </div>
+
+          <div class="products__panel is-active" id="painel-gatos-secos" role="tabpanel" aria-labelledby="tab-gatos-secos" data-panel="secos">
+            <svg class="produtos-paw produtos-paw--10" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--3" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--4" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <div class="products__grid">
 
             <article class="product-card reveal" data-reveal="up">
               <div class="product-card__media">
@@ -514,60 +694,14 @@
               </div>
             </article>
 
+            </div>
           </div>
-        </div>
 
-        <div class="products__panel" id="painel-saches" role="tabpanel" aria-labelledby="tab-saches" data-panel="saches" hidden>
-          <div class="products__grid">
-
-            <article class="product-card reveal" data-reveal="up">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/pouch-dog-cordeiro.webp" alt="Sachê Fargo Premium Especial Cordeiro ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Sachê Cordeiro ao Molho</h3>
-                <p class="product-card__flavor">100g · Cozido a vapor</p>
-                <p class="product-card__desc">Elaborado com carnes selecionadas, sem aromatizantes artificiais.</p>
-                <div class="product-card__actions">
-                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
-                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-dog-cordeiro">Saiba Mais</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/pouch-dog-carne.webp" alt="Sachê Fargo Premium Especial Carne ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Sachê Carne ao Molho</h3>
-                <p class="product-card__flavor">100g · Cozido a vapor</p>
-                <p class="product-card__desc">Ingredientes naturais e alta palatabilidade para o dia a dia do seu cão.</p>
-                <div class="product-card__actions">
-                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
-                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-dog-carne">Saiba Mais</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/pouch-dog-frango.webp" alt="Sachê Fargo Premium Especial Frango ao Molho para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Sachê Frango ao Molho</h3>
-                <p class="product-card__flavor">100g · Cozido a vapor</p>
-                <p class="product-card__desc">Saboroso e nutritivo, sem transgênicos ou conservantes artificiais.</p>
-                <div class="product-card__actions">
-                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
-                  <button class="btn btn--outline btn--sm" type="button" data-product-open="sache-dog-frango">Saiba Mais</button>
-                </div>
-              </div>
-            </article>
-
+          <div class="products__panel" id="painel-gatos-umidos" role="tabpanel" aria-labelledby="tab-gatos-umidos" data-panel="umidos" hidden>
+            <svg class="produtos-paw produtos-paw--10" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--3" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--4" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <div class="products__grid">
             <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.18s">
               <div class="product-card__media">
                 <span class="product-card__tag">Gatos Castrados</span>
@@ -583,7 +717,6 @@
                 </div>
               </div>
             </article>
-
             <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
               <div class="product-card__media">
                 <span class="product-card__tag">Gatos Adultos</span>
@@ -599,7 +732,6 @@
                 </div>
               </div>
             </article>
-
             <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.3s">
               <div class="product-card__media">
                 <span class="product-card__tag">Gatos Castrados</span>
@@ -615,77 +747,6 @@
                 </div>
               </div>
             </article>
-
-          </div>
-        </div>
-
-        <div class="products__panel" id="painel-enlatados" role="tabpanel" aria-labelledby="tab-enlatados" data-panel="enlatados" hidden>
-          <div class="products__grid">
-
-            <article class="product-card reveal" data-reveal="up">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/can-dog-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
-                <div class="product-card__actions">
-                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
-                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-carne">Saiba Mais</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.06s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Filhotes</span>
-                <img src="assets/images/can-dog-filhote-carne.webp" alt="Enlatado Fargo Premium Especial sabor carne para cães filhotes" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Carne</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Nutrição completa para o crescimento saudável do filhote.</p>
-                <div class="product-card__actions">
-                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
-                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-filhote-carne">Saiba Mais</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.12s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/can-dog-frango.webp" alt="Enlatado Fargo Premium Especial sabor frango para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Frango</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
-                <div class="product-card__actions">
-                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
-                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-frango">Saiba Mais</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.18s">
-              <div class="product-card__media">
-                <span class="product-card__tag">Cães Adultos</span>
-                <img src="assets/images/can-dog-figado.webp" alt="Enlatado Fargo Premium Especial sabor fígado para cães adultos" loading="lazy" decoding="async" width="900" height="900" />
-              </div>
-              <div class="product-card__body">
-                <h3 class="product-card__name">Enlatado Paté Sabor Fígado</h3>
-                <p class="product-card__flavor">290g · Cozido a vapor</p>
-                <p class="product-card__desc">Fórmula fechada, sem aromatizantes artificiais.</p>
-                <div class="product-card__actions">
-                  <a class="btn btn--primary btn--sm" href="#onde-comprar">Comprar Fargo</a>
-                  <button class="btn btn--outline btn--sm" type="button" data-product-open="can-dog-figado">Saiba Mais</button>
-                </div>
-              </div>
-            </article>
-
             <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.24s">
               <div class="product-card__media">
                 <span class="product-card__tag">Gatos Adultos</span>
@@ -701,7 +762,6 @@
                 </div>
               </div>
             </article>
-
             <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.3s">
               <div class="product-card__media">
                 <span class="product-card__tag">Gatos Adultos</span>
@@ -717,7 +777,6 @@
                 </div>
               </div>
             </article>
-
             <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.36s">
               <div class="product-card__media">
                 <span class="product-card__tag">Gatos Adultos</span>
@@ -733,7 +792,6 @@
                 </div>
               </div>
             </article>
-
             <article class="product-card reveal" data-reveal="up" style="--reveal-delay:.42s">
               <div class="product-card__media">
                 <span class="product-card__tag">Gatos Adultos</span>
@@ -750,11 +808,14 @@
               </div>
             </article>
 
+            </div>
           </div>
-        </div>
 
-        <div class="products__panel" id="painel-granulado" role="tabpanel" aria-labelledby="tab-granulado" data-panel="granulado" hidden>
-          <div class="products__grid">
+          <div class="products__panel" id="painel-gatos-granulado" role="tabpanel" aria-labelledby="tab-gatos-granulado" data-panel="granulado" hidden>
+            <svg class="produtos-paw produtos-paw--10" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--3" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <svg class="produtos-paw produtos-paw--4" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+            <div class="products__grid">
 
             <article class="product-card reveal" data-reveal="up">
               <div class="product-card__media">
@@ -820,6 +881,7 @@
               </div>
             </article>
 
+            </div>
           </div>
         </div>
       </div>
@@ -878,6 +940,7 @@
               <p class="pillar__text">Relações duradouras com tutores, pet shops, veterinários e distribuidores em todo o Brasil.</p>
             </div>
           </div>
+          <img class="about__cat-peek" src="assets/images/sobre-cat-full.webp" alt="" aria-hidden="true" />
         </div>
       </div>
     </section>
@@ -926,9 +989,11 @@
       </div>
     </section>
 
-
     <!-- ================= BENEFÍCIOS ================= -->
     <section class="section" id="beneficios">
+      <svg class="beneficios-wave-top" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,0 L1440,0 L1440,35 C1200,100 960,10 720,70 C480,105 240,15 0,85 Z" fill="#faf8f4" />
+      </svg>
       <div class="container">
         <div class="section__header section__header--center reveal" data-reveal="up">
           <span class="eyebrow">Benefícios</span>
@@ -1320,6 +1385,9 @@
 
     <!-- ================= CTA FINAL ================= -->
     <section class="section cta-final" id="onde-comprar">
+      <svg class="cta-final-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,0 L1440,0 L1440,55 C1200,90 960,35 720,65 C480,95 240,45 0,75 Z" fill="#faf8f4" />
+      </svg>
       <svg class="cta-final__paw cta-final__paw--1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
       <svg class="cta-final__paw cta-final__paw--2" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
 
@@ -1330,8 +1398,8 @@
           Fale com a nossa equipe, conheça a linha completa e descubra o ponto de venda Fargo mais próximo de você.
         </p>
         <div class="cta-final__actions reveal" data-reveal="up">
-          <a class="btn btn--primary btn--lg" href="#produtos">Comprar Fargo</a>
-          <a class="btn btn--outline" href="#parceria">Torne-se um Parceiro Fargo</a>
+          <a class="btn btn--primary btn--xl" href="#produtos">Comprar Fargo</a>
+          <a class="btn btn--outline btn--xl" href="#parceria">Torne-se um Parceiro Fargo</a>
         </div>
       </div>
     </section>

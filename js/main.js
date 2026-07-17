@@ -1,8 +1,9 @@
 /**
  * main.js
- * Interações principais da landing page Fargo: navegação, tabs de produtos,
- * accordion de FAQ, slider de depoimentos, modal de produto, newsletter e
- * botão voltar ao topo. Módulos independentes, inicializados no DOMContentLoaded.
+ * Interações principais da landing page Fargo: menu mobile, header ao rolar,
+ * troca de espécie/categoria de produtos, accordion de FAQ, slider de
+ * depoimentos, modal de produto, newsletter e botão voltar ao topo. Módulos
+ * independentes, inicializados no DOMContentLoaded.
  */
 
 (function () {
@@ -201,70 +202,86 @@
     },
   };
 
-  /* ---------- Navegação mobile ---------- */
-  function initNav() {
-    const nav = document.querySelector("[data-nav]");
-    const toggle = document.querySelector("[data-nav-toggle]");
-    const closeBtn = document.querySelector("[data-nav-close]");
-    if (!nav || !toggle) return;
+  /* ---------- Menu mobile (off-canvas) ---------- */
+  function initMobileMenu() {
+    const menu = document.querySelector("[data-mobile-menu]");
+    const toggle = document.querySelector("[data-menu-toggle]");
+    const closeBtn = document.querySelector("[data-menu-close]");
+    if (!menu || !toggle) return;
 
-    function openNav() {
-      nav.classList.add("is-open");
+    function openMenu() {
+      menu.classList.add("is-open");
+      menu.setAttribute("aria-hidden", "false");
       toggle.classList.add("is-active");
       toggle.setAttribute("aria-expanded", "true");
       document.body.style.overflow = "hidden";
     }
 
-    function closeNav() {
-      nav.classList.remove("is-open");
+    function closeMenu() {
+      menu.classList.remove("is-open");
+      menu.setAttribute("aria-hidden", "true");
       toggle.classList.remove("is-active");
       toggle.setAttribute("aria-expanded", "false");
       document.body.style.overflow = "";
     }
 
     toggle.addEventListener("click", () => {
-      nav.classList.contains("is-open") ? closeNav() : openNav();
+      menu.classList.contains("is-open") ? closeMenu() : openMenu();
     });
 
-    closeBtn?.addEventListener("click", closeNav);
+    closeBtn?.addEventListener("click", closeMenu);
 
-    nav.querySelectorAll("[data-nav-link]").forEach((link) => {
-      link.addEventListener("click", closeNav);
+    menu.querySelectorAll("[data-menu-link]").forEach((link) => {
+      link.addEventListener("click", closeMenu);
     });
 
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && nav.classList.contains("is-open")) closeNav();
+      if (e.key === "Escape" && menu.classList.contains("is-open")) closeMenu();
     });
   }
 
-  /* ---------- Header com fundo ao rolar ---------- */
-  function initHeaderScroll() {
-    const header = document.querySelector("[data-header]");
-    if (!header) return;
-
-    function update() {
-      header.classList.toggle("header--scrolled", window.scrollY > 40);
-    }
-
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-  }
-
-  /* ---------- Tabs da linha de produtos (Cães / Gatos) ---------- */
-  function initProductTabs() {
-    const buttons = document.querySelectorAll("[data-tab]");
+  /* ---------- Troca de espécie (Cães / Gatos) ---------- */
+  function initSpeciesSwitch() {
+    const buttons = document.querySelectorAll("[data-species-tab]");
     if (!buttons.length) return;
 
     buttons.forEach((btn) => {
       btn.addEventListener("click", () => {
-        const target = btn.dataset.tab;
+        const target = btn.dataset.speciesTab;
 
         buttons.forEach((b) => {
           b.classList.toggle("is-active", b === btn);
           b.setAttribute("aria-selected", b === btn ? "true" : "false");
         });
 
-        document.querySelectorAll("[data-panel]").forEach((panel) => {
+        document.querySelectorAll("[data-species-panel]").forEach((panel) => {
+          const isMatch = panel.dataset.speciesPanel === target;
+          panel.classList.toggle("is-active", isMatch);
+          panel.hidden = !isMatch;
+        });
+      });
+    });
+  }
+
+  /* ---------- Categoria dentro da espécie (Secos / Úmidos / Granulado) ---------- */
+  function initCategoryTabs() {
+    const buttons = document.querySelectorAll("[data-category-tab]");
+    if (!buttons.length) return;
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const speciesPanel = btn.closest(".species-panel");
+        if (!speciesPanel) return;
+
+        const target = btn.dataset.categoryTab;
+        const groupButtons = speciesPanel.querySelectorAll("[data-category-tab]");
+
+        groupButtons.forEach((b) => {
+          b.classList.toggle("is-active", b === btn);
+          b.setAttribute("aria-selected", b === btn ? "true" : "false");
+        });
+
+        speciesPanel.querySelectorAll("[data-panel]").forEach((panel) => {
           const isMatch = panel.dataset.panel === target;
           panel.classList.toggle("is-active", isMatch);
           panel.hidden = !isMatch;
@@ -480,9 +497,9 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    initNav();
-    initHeaderScroll();
-    initProductTabs();
+    initMobileMenu();
+    initSpeciesSwitch();
+    initCategoryTabs();
     initFaqAccordion();
     initTestimonialSlider();
     initProductModal();

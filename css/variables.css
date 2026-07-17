@@ -36,6 +36,7 @@
   --color-green-500: #2f6b4c;
   --color-green-600: #255a3f;
   --color-green-700: #1c4531;
+  --color-green-800: #12301f;
 
   --color-orange-50: #fdf0e5;
   --color-orange-400: #ec9455;
@@ -54,6 +55,7 @@
 
   /* ---------- Gradientes premium ---------- */
   --gradient-brand-soft: linear-gradient(135deg, var(--color-green-50) 0%, var(--color-orange-50) 100%);
+  --gradient-brand-bold: linear-gradient(135deg, var(--color-green-700) 0%, var(--color-green-500) 100%);
 
   /* ---------- Glassmorphism ---------- */
   --surface-glass: rgba(255, 255, 255, 0.6);
@@ -97,4 +99,10 @@
   --z-header: 100;
   --z-overlay: 200;
   --z-modal: 300;
+
+  /* ---------- Header ---------- */
+  --header-top-h: 70px;
+  --header-badge-w: 300px;
+  --header-badge-h: 60px;
+  --header-nav-radius: 40px;
 }
