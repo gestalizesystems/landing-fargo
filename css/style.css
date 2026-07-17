@@ -247,7 +247,7 @@ h4 {
 .site-header__logo {
   position: absolute;
   z-index: 2;
-  top: calc(100% + 10px);
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
@@ -269,7 +269,7 @@ h4 {
   z-index: 1;
   width: 75%;
   height: auto;
-  transform: translateY(-26px);
+  transform: translateY(-16px);
 }
 
 .site-header__logo-tag {
