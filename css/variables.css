@@ -33,12 +33,14 @@
   --color-ink: #23241f;
   --color-ink-soft: #45443b;
 
-  --color-green-50: #e9f0fb;
+  --color-green-50: #eaf0fa;
   --color-green-100: #c9d8f2;
   --color-green-500: #1152d4;
   --color-green-600: #0f45b3;
   --color-green-700: #0b358e;
   --color-green-800: #07205a;
+
+  --color-icon-blue: #2651cc;
 
   --color-orange-50: #e6e5dd;
   --color-orange-400: #adaa97;
