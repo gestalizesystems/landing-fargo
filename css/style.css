@@ -147,14 +147,14 @@ h4 {
 }
 
 .btn--primary {
-  background: var(--color-orange-500);
+  background: #1573bd;
   color: var(--color-white);
-  box-shadow: 0 10px 24px rgba(203, 202, 199, 0.45);
+  box-shadow: 0 10px 24px rgba(21, 115, 189, 0.35);
 }
 
 .btn--primary:hover {
-  background: var(--color-orange-600);
-  box-shadow: 0 14px 30px rgba(203, 202, 199, 0.55);
+  background: #105a94;
+  box-shadow: 0 14px 30px rgba(21, 115, 189, 0.45);
   transform: translateY(-2px);
 }
 
@@ -1183,7 +1183,7 @@ h4 {
 }
 
 .species-card.is-active {
-  background: var(--color-orange-500);
+  background: #1573bd;
   color: var(--color-white);
 }
 
