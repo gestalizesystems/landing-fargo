@@ -695,12 +695,13 @@ h4 {
 
 .cards-grid {
   display: grid;
-  gap: var(--space-md);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
 }
 
 .diff-card {
   position: relative;
-  padding: var(--space-lg) var(--space-md) var(--space-md);
+  padding: var(--space-md) var(--space-sm) var(--space-sm);
   background: var(--color-white);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
@@ -1126,11 +1127,13 @@ h4 {
 
 .species-peek--cat {
   right: 3%;
+  bottom: 15px;
   height: 92px;
 }
 
 .species-peek--cat-paw {
   right: 3%;
+  bottom: 15px;
   height: 26px;
   z-index: 2;
 }
@@ -1220,12 +1223,13 @@ h4 {
 
 .benefits__grid {
   display: grid;
-  gap: var(--space-md);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
 }
 
 .benefit {
   text-align: center;
-  padding: var(--space-lg) var(--space-sm);
+  padding: var(--space-md) var(--space-xs);
   border-radius: var(--radius-md);
   background: var(--color-white);
   box-shadow: var(--shadow-sm);
